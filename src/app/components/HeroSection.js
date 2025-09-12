@@ -61,14 +61,15 @@ const HeroSection = () => {
           {/* Hero Headline */}
           <div className="Hero-headline">
             <div className="tagline">Your Trusted Growth Experts</div>
-            <h1 className="text-white ">
+            <h1 className="text-white !text-4xl sm:!text-5xl lg:!text-6xl">
               <span className="block">Strategy That Scales.</span>
               <span className="block">Growth That Lasts</span>
             </h1>
 
             {/* Subheadline/Description */}
-            <p className="">
-              We craft data-driven strategies that drive growth, helping brands
+            <p className="!break-words !text-base sm:!text-xl xl:!text-2xl">
+              We craft data-driven strategies that drive growth, helping brands{" "}
+              <br />
               navigate the digital landscape with precision.
             </p>
 
@@ -91,46 +92,43 @@ const HeroSection = () => {
         </div>
 
         {/* Badges/Awards bar (bottom right, optional) */}
-        <div className={`absolute bottom-0 right-0    ${styles.logoBox}`}>
+        <div
+          className={`absolute bottom-0 right-0 bg-white/12 backdrop-blur-[24px] border border-white/40 border-b-0 rounded-tl-[24px] p-4 sm:p-6 md:p-8}`}
+        >
           {/* Replace these spans/images with your actual award badge images */}
-          <p className={`${styles.logotext}`}>
+          <p className="!text-lg sm:!text-xl xl:!text-2xl text-white">
             Recognized for Excellence in Marketing Services
           </p>
-          <div className="flex flex-wrap items-center align-center justify-between gap-4">
+          <div className="flex flex-wrap items-center justify-between gap-8">
             <Image
               unoptimized
               src={bestChoiceLogo}
-              width={71}
-              height={72}
               alt="Best Choice"
+              className="w-14 sm:w-16 md:w-20 lg:w-22 h-auto"
             />
             <Image
               unoptimized
               src={usersLoveUsLogo}
-              width={64}
-              height={72}
               alt="Top Rated"
+              className="w-12 sm:w-14 md:w-16 lg:w-18 h-auto"
             />
             <Image
               unoptimized
               src={blueStarLogo}
-              width={55}
-              height={72}
               alt="Best Service"
+              className="w-10 sm:w-12 md:w-14 lg:w-16 h-auto"
             />
             <Image
               unoptimized
               src={premiumQualityLogo}
-              width={86}
-              height={72}
               alt="Premium Quality"
+              className="w-16 sm:w-20 md:w-22 lg:w-24 h-auto"
             />
             <Image
               unoptimized
               src={goldDiscLogo}
-              width={72}
-              height={72}
               alt="Sales & Marketing"
+              className="w-16 sm:w-20 md:w-22 lg:w-24 h-auto"
             />
           </div>
         </div>

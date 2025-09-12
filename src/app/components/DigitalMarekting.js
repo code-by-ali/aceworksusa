@@ -38,7 +38,7 @@ export default function DigitalMarketing() {
       <div className="container">
         <badge className="badge-blue m-auto">Our Services</badge>
 
-        <h3 className="text-center">
+        <h3 className="text-center !text-3xl sm:!text-4xl xl:!text-5xl">
           Full Service Digital <br />
           Marketing Agency
         </h3>

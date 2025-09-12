@@ -44,7 +44,7 @@ const DigitalSolution = () => {
       <section className="digital-solution py-5">
         <div className="container">
           <div className="badge-blue m-auto">Why Choose Acework</div>
-          <h3 className="text-center lg:text-left">
+          <h3 className="text-center lg:text-left !text-3xl sm:!text-4xl xl:!text-5xl">
             Digital solution for <br className="hidden lg:block" /> your growth
           </h3>
           <p className="subtitle text-center lg:text-left">
@@ -60,14 +60,18 @@ const DigitalSolution = () => {
                 key={idx}
                 className={`
                   w-full 
-                  ${idx === 0 ? 'lg:w-[52%]' : 'lg:w-[48%]'} 
+                  ${idx === 0 ? "lg:w-[52%]" : "lg:w-[48%]"} 
                   flex
                 `}
               >
                 <div className="card digital-card flex flex-col w-full">
                   <div className="card-body flex-1 p-4 lg:p-6">
-                    <h5 className="card-title text-lg lg:text-xl mb-3">{card.title}</h5>
-                    <p className="card-text text-sm lg:text-base mb-4">{card.description}</p>
+                    <div className="card-title mb-3 text-xl sm:text-2xl md:text-2xl lg:text-2xl xl:text-3xl">
+                      {card.title}
+                    </div>
+                    <p className="card-text text-sm lg:text-base mb-4">
+                      {card.description}
+                    </p>
                   </div>
                   {card.image && (
                     <div className="w-full h-48 sm:h-56 md:h-64 lg:h-64 xl:h-72 relative">
@@ -93,14 +97,18 @@ const DigitalSolution = () => {
                 key={idx}
                 className={`
                   w-full 
-                  ${idx === 0 ? 'lg:w-[48%]' : 'lg:w-[52%]'} 
+                  ${idx === 0 ? "lg:w-[48%]" : "lg:w-[52%]"} 
                   flex
                 `}
               >
                 <div className="card digital-card flex flex-col w-full">
                   <div className="card-body flex-1 p-4 lg:p-6">
-                    <h5 className="card-title text-lg lg:text-xl mb-3">{card.title}</h5>
-                    <p className="card-text text-sm lg:text-base mb-4">{card.description}</p>
+                    <h5 className="card-title text-lg lg:text-xl mb-3">
+                      {card.title}
+                    </h5>
+                    <p className="card-text text-sm lg:text-base mb-4">
+                      {card.description}
+                    </p>
                   </div>
                   {card.image && (
                     <div className="w-full h-48 sm:h-56 md:h-64 lg:h-64 xl:h-72 relative">

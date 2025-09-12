@@ -25,7 +25,7 @@ const Blog = () => {
           <badge className="badge-blue">Will Keep You Updated</badge>
 
           <div className="d-flex justify-content-between align-items-end">
-            <h3>
+            <h3 className="!text-3xl sm:!text-4xl xl:!text-5xl">
               Smart Marketing <br />
               Solutions for Every Business
             </h3>

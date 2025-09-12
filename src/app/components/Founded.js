@@ -8,7 +8,7 @@ const Founded = () => {
         {/* Top Box */}
         <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-20 founded-box-one">
           <div className="w-full lg:w-2/3">
-            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium leading-snug">
+            <h3 className="!text-3xl sm:!text-4xl xl:!text-5xl font-medium leading-snug">
               Founded in 2016, we are a <br />
               California based independent <br />
               digital marketing agency.

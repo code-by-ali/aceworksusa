@@ -59,15 +59,15 @@ const SeoServices = () => {
       <div className="container">
         <badge className="badge-orange">SEO Services</badge>
         <div className="d-flex justify-content-between align-items-center flex-col md:flex-row">
-          <h3>
+          <h3 className="!text-3xl sm:!text-4xl xl:!text-5xl">
             How can we help <br />
             Your business grow
           </h3>
-          <div className="d-flex">
-            <a href="" className="btn-orange mr-5">
+          <div className="d-flex gap-2">
+            <a href="" className="btn-orange !w-auto">
               Free SEO Consultaion
             </a>
-            <a href="" className="btn-light">
+            <a href="" className="btn-light !w-auto">
               Get A Quote
             </a>
           </div>

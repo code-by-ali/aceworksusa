@@ -41,6 +41,7 @@ h6 {
   font-size: 24px;
   line-height: 24px;
 }
+
 .btn-orange {
   width: 195px;
   background: var(--primary-btn);
@@ -71,7 +72,6 @@ ul {
   font-weight: 500;
   margin-top: 24px;
   font-size: 16px;
-  width: 500px;
   line-height: 24px;
   color: #ffffff;
 }
@@ -89,10 +89,7 @@ ul {
 .digital-solution {
   padding: 40px 0px 99px 0px;
 }
-.digital-solution h3,
-.real-result h3,
-.digital-marketing h3,
-.faq-sec h3 {
+.digital-solution h3 {
   font-weight: 700;
   font-size: 50.17px;
   line-height: 56.16px;
@@ -145,7 +142,7 @@ ul {
 /* .digital-card .card-body {
   padding: 40px 40px 0px 40px;
 } */
-.digital-card .card-body h5 {
+.digital-card .card-body {
   font-weight: 500;
   font-size: 30px;
   line-height: 39.68px;
@@ -154,7 +151,7 @@ ul {
 .digital-card .card-body p {
   color: #25252580;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 29.52px;
 }
 /* real result */

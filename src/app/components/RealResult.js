@@ -37,7 +37,7 @@ const RealResult = () => {
           {/* Content second */}
           <div className="w-full lg:w-1/2 order-2">
             <badge className="badge-orange">How it Works</badge>
-            <h3 className="text-3xl sm:text-4xl font-bold mt-0 mb-4">
+            <h3 className="!text-3xl sm:!text-4xl xl:!text-5xl font-bold mt-0 mb-4">
               Bold Ideas. Smart
               <br /> Execution. Real Results
             </h3>
