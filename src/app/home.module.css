@@ -1,0 +1,23 @@
+.herobg {
+  background-image: url("../../public/assets/HeroImg.webp");
+  background-size: cover;
+  background-position: center;
+  margin-top: -100px;
+  padding-top: 190px;
+  padding-bottom: 190px;
+}
+.logotext {
+  font-family: var(--font-family-primary);
+  font-weight: 700;
+  font-size: 22.69px;
+  line-height: 33.6px;
+  color: #fff;
+}
+.logoBox {
+  background: #ffffff1f;
+  backdrop-filter: blur(24px);
+  border: 2px solid #ffffff66;
+  border-bottom: none !important;
+  padding: 31px;
+  border-top-left-radius: 24px;
+}
