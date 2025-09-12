@@ -10,7 +10,7 @@ import Blog from "./components/Blog";
 import Faq from "./components/Faq";
 const page = () => {
   return (
-    <div>
+    <div className="bg-white">
       <HeroSection />
       <DigitalSolution />
       <RealResult />

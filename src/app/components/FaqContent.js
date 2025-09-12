@@ -55,7 +55,7 @@ const FaqContent = () => {
               setActiveTab(key);
               setOpenIndex(null);
             }}
-            className={`!rounded-full px-6 py-3 text-sm sm:text-base font-bold border w-[140px] sm:w-[150px] transition-none
+            className={`!rounded-full px-6 py-2 text-sm sm:text-base font-bold border-2 w-[140px] !border-[#FF5E15] sm:w-[150px] transition-none
               ${
                 activeTab === key
                   ? "bg-[var(--primary-btn)] text-white border-[var(--primary-btn)]"
@@ -75,7 +75,9 @@ const FaqContent = () => {
               onClick={() => toggleAccordion(idx)}
               className="flex justify-between w-full text-left"
             >
-              <span className="font-bold text-lg sm:text-xl">{faq.title}</span>
+              <span className="font-bold text-lg sm:text-xl text-black">
+                {faq.title}
+              </span>
               <span
                 className={`transform transition-transform duration-300 ml-2 ${
                   openIndex === idx ? "rotate-0" : "rotate-180"
@@ -93,7 +95,7 @@ const FaqContent = () => {
             </button>
             {openIndex === idx && (
               <div className="mt-3 pr-6">
-                <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                <p className="text-[#25252580] !font-medium text-sm sm:text-base leading-relaxed">
                   {faq.description}
                 </p>
               </div>
