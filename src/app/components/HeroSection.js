@@ -94,7 +94,7 @@ const HeroSection = () => {
         <div className={`absolute bottom-0 right-0    ${styles.logoBox}`}>
           {/* Replace these spans/images with your actual award badge images */}
           <p className={`${styles.logotext}`}>
-            Recognized for Excellence in Marketing Services!
+            Recognized for Excellence in Marketing Services
           </p>
           <div className="flex flex-wrap items-center align-center justify-between gap-4">
             <Image
