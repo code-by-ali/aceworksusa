@@ -33,22 +33,25 @@ const Blog = () => {
               View All Blogs
             </a>
           </div>
+
           <div className="blogs">
-            <div className="row">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {blog.map((blog, idx) => (
-                <div className="col-md-4" key={idx}>
-                  <div className="card  blog-card">
-                    <Image
-                      unoptimized
-                      src={blog.image}
-                      alt={blog.title}
-                      width={100}
-                      height={100}
-                      style={{ width: "100%" }}
-                    />
-                    <div className="card-body">
-                      <h6>{blog.date}</h6>
-                      <h4>{blog.title}</h4>
+                <div key={idx} className="card blog-card">
+                  <Image
+                    unoptimized
+                    src={blog.image}
+                    alt={blog.title}
+                    width={100}
+                    height={100}
+                    className="w-full"
+                  />
+                  <div className="card-body">
+                    <div className="font-medium text-[#25252580] text-base sm:text-sm">
+                      {blog.date}
+                    </div>
+                    <div className="font-bold text-xl sm:text-2xl">
+                      {blog.title}
                     </div>
                   </div>
                 </div>

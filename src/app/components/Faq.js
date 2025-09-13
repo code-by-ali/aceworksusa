@@ -10,7 +10,7 @@ const Faq = () => {
           We’re here to answer all <br /> your questions
         </h3>
         <FaqContent />
-        <p className="tag-line">
+        <p className="tag-line font-medium text-center !mt-6 text-sm sm:text-base text-[#25252580]">
           If you cant find what youre looking for, feel free to{" "}
           <span className="underline underline-offset-2 text-inherit">
             Contact us

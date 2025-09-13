@@ -1,7 +1,7 @@
 import React from "react";
-
 import Image from "next/image";
 import styles from "../home.module.css";
+
 import cutomerimg from "../../../public/assets/customerImg.png";
 import check from "../../../public/assets/checkorange.svg";
 
@@ -14,23 +14,18 @@ import goldDiscLogo from "../../../public/assets/goldDiscLogo.png";
 const HeroSection = () => {
   return (
     <div>
-      <section
-        className={`relative  flex items-center bg-black ${styles.herobg}`}
-      >
-        {/* Background image with dark overlay */}
-
-        <div className="container mx-auto px-6 flex flex-col gap-8 ">
+      <section className={`relative bg-black ${styles.herobg}`}>
+        {/* Hero Content */}
+        <div className="container mx-auto px-6 flex flex-col gap-8 pb-32 sm:pb-40">
           {/* Customer Review Badge */}
           <div className="flex items-center gap-2 bg-white/10 rounded-full px-4 py-1 w-fit backdrop-blur">
-            {/* Avatars (placeholder) */}
             <div className="flex -space-x-3">
               <Image
                 unoptimized
                 src={cutomerimg}
                 width={128}
                 height={32}
-                className=""
-                alt="User 1"
+                alt="Customer"
               />
             </div>
             <div>
@@ -40,20 +35,13 @@ const HeroSection = () => {
                 width={32}
                 height={32}
                 className="check-orange"
-                alt="User 1"
+                alt="Verified"
               />
-
-              <div
-                className="text-white text-sm font-semibold ml-3"
-                style={{ fontSize: "24px" }}
-              >
+              <div className="text-white font-semibold ml-3 text-2xl">
                 130K+
               </div>
-              <div
-                className="text-white  ml-3"
-                style={{ color: "#F1F2FA", fontSize: "14px" }}
-              >
-                Customer Review+
+              <div className="ml-3 text-sm" style={{ color: "#F1F2FA" }}>
+                Customer Reviews
               </div>
             </div>
           </div>
@@ -66,15 +54,15 @@ const HeroSection = () => {
               <span className="block">Growth That Lasts</span>
             </h1>
 
-            {/* Subheadline/Description */}
+            {/* Subheadline */}
             <p className="!break-words !text-base sm:!text-xl xl:!text-2xl">
-              We craft data-driven strategies that drive growth, helping brands{" "}
+              We craft data-driven strategies that drive growth, helping brands
               <br />
               navigate the digital landscape with precision.
             </p>
 
             {/* Call to Action Buttons */}
-            <div className="flex gap-4  callToAction">
+            <div className="flex flex-wrap text-sm sm:text-base mt-10 gap-4">
               <a
                 href="#"
                 className="bg-white text-black font-semibold px-6 py-3 rounded-full shadow hover:bg-gray-200 transition"
@@ -91,11 +79,8 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Badges/Awards bar (bottom right, optional) */}
-        <div
-          className={`absolute bottom-0 right-0 bg-white/12 backdrop-blur-[24px] border border-white/40 border-b-0 rounded-tl-[24px] p-4 sm:p-6 md:p-8}`}
-        >
-          {/* Replace these spans/images with your actual award badge images */}
+        {/* Logos / Badges Section */}
+        <div className="bg-white/12 backdrop-blur-[24px] border border-white/40 border-b-0 rounded-tl-[24px] p-4 sm:p-6 md:p-8 absolute bottom-0 right-0">
           <p className="!text-lg sm:!text-xl xl:!text-2xl text-white">
             Recognized for Excellence in Marketing Services
           </p>
