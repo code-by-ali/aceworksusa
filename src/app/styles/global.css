@@ -35,13 +35,19 @@ h5,
 h6 {
   color: #252525 !important;
 }
+p{
+  font-family: var(--font-family-secondary);
+}
 .logo {
   font-family: var(--font-family-secondary);
   font-weight: 600;
   font-size: 24px;
   line-height: 24px;
 }
-
+.bg-primary{
+  background: var(--secondary-btn)!important;
+  color: #fff!important;
+}
 .btn-orange {
   width: 195px;
   background: var(--primary-btn);
@@ -477,6 +483,7 @@ a i {
 /* about us banner */
 .about-banner h1,
 .make-business h3,
+.our-services h3,
 .future-business h3 {
   font-weight: 600;
   font-size: 72px;
@@ -744,3 +751,337 @@ a i {
   color: inherit !important;
   box-shadow: none !important;
 }
+.service-banner .badge-orange{
+transform: rotate(0);
+}
+.service-banner h3{
+color: #252525;
+font-weight: 600;
+margin-bottom: 19px;
+font-size: 64px;
+line-height: 72px;
+letter-spacing: -0.64px;
+}
+.service-banner p{
+  color: #525866;
+font-weight: 500;
+font-size: 18px;
+line-height: 28px;
+margin-bottom: 35px;
+}
+.service-right{
+  position: relative;
+}
+.info-det-box{
+  box-shadow: 16px 24px 72px 0px #00000014;
+background: #fff;
+border-radius: 24px;
+width: max-content;
+padding: 32px 32px 8px 32px;
+position: absolute;
+bottom: -32px;
+left: -120px;
+}
+.info-det-box ul li{
+display: flex;
+font-family: var(--font-family-secondary);
+font-weight: 500;
+font-size: 18px;
+line-height: 23.94px;
+margin-bottom: 24px;
+letter-spacing: -0.24px;
+color: #252525;
+}
+.info-det-box ul li img{
+  margin-right: 8px;
+}
+.our-services p{
+font-weight: 500;
+font-size: 18px;
+line-height: 28px;
+text-align: center;
+color:#525866 ;
+}
+/* services css */
+.our-services{
+  background:#F5F7F9 ;
+}
+.our-services .business-cards img{
+  margin-bottom: 24px;
+}
+.our-services .business-cards .card-style{
+  box-shadow: none!important;
+}
+.our-services .business-cards h4{
+font-weight: 500;
+font-size: 22.69px;
+line-height: 30px;
+letter-spacing: -0.24px;
+margin-bottom: 10px;
+}
+.our-services .business-cards p{
+  font-family: var(--font-family-secondary);
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: -0.24px;
+text-align: left;
+}
+/* case stiudy */
+.case-study h3{
+font-weight: 500;
+font-size: 52.39px;
+line-height: 64.4px;
+letter-spacing: -0.56px;
+margin-bottom: 30px;
+}
+.case-study-right{
+  border: 1px solid #E2E4E9;
+  padding: 25px;
+  border-radius: 24px;
+}
+.case-study-right h6{
+font-weight: 500;
+font-size: 22.69px;
+margin-top: 24px;
+margin-bottom: 10px;
+line-height: 30px;
+letter-spacing: -0.24px;
+
+}
+.case-study-right p{
+font-weight: 400;
+margin: 0px;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: -0.24px;
+color:#525866 ;
+}
+.case-study-box{
+  background: #F6F8FA;
+  padding: 24px;
+  border-radius: 24px;
+}
+.case-study-box p{
+font-weight: 500;
+font-size: 24px;
+line-height: 36px;
+letter-spacing: -0.24px;
+margin-top: 27px;
+margin-bottom: 0px;
+color: #252525;
+}
+.bg-primary-outline{
+  background-color: #fff;
+  border: 1px solid var(--secondary-btn)!important;
+  color: var(--secondary-btn)!important;
+}
+.quick-call
+{
+  background: var(--secondary-btn);
+}
+.quick-call h3{
+font-weight: 600;
+font-size: 50px;
+line-height: 60px;
+letter-spacing: -0.5px;
+color: #fff!important;
+}
+.quick-call p{
+font-family: var(--font-family-primary);
+font-weight: 500;
+font-size: 20px;
+line-height: 32px;
+letter-spacing: -0.2px;
+
+}
+
+/*  */
+.contact-section {
+  
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.contact-badge {
+  display: inline-block;
+  background: #3164F4;
+  color: #fff;
+  border-radius: 18px;
+  padding: 4px 18px;
+  font-size: 14px;
+  margin-bottom: 8px;
+  position: relative;
+  top: -10px;
+}
+
+.contact-header h3 {
+font-weight: 600;
+font-size: 72px;
+line-height: 80px;
+letter-spacing: -2px;
+text-align: center;
+  margin: 0 0 37px 0;
+
+}
+
+
+
+.contact-header p {
+  margin: 0 0 37px 0;
+ color: #252525;
+ opacity: 0.7;
+}
+.follow-us{
+  color:#265A92 ;
+font-family: var(--font-family-primary);
+font-weight: 700;
+font-style: Bold;
+font-size: 18.91px;
+
+line-height: 28px;
+letter-spacing: -0.3px;
+
+}
+.social-links {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+ 
+}
+
+.social-links a {
+  color: #252525;
+  font-family: var(--font-family-primary);
+font-weight: 500;
+font-size: 17.16px;
+line-height: 29.52px;
+  margin-left: 9px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.social-links a:hover {
+  color: #F95C19;
+}
+
+/* Panels */
+.contact-panels {
+  
+}
+
+.contact-left-panel {
+  
+  background: #252525;
+  border-radius: 8px;
+  color: #fff;
+  padding: 42px;
+  margin-bottom: 10px;
+  
+}
+
+.contact-left-panel h3 {
+font-weight: 700;
+font-size: 30px;
+line-height: 49.6px;
+text-align: center;
+color: #fff!important;
+}
+
+.panel-graphic {
+ text-align: center;
+ margin-top: 67px;
+}
+
+.panel-graphic p{
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+text-align: center;
+color: #fff;
+margin-top: 46px;
+}
+
+
+
+
+/* Form styles */
+.contact-form {
+  
+  background: #fff;
+  border-radius: 36px;
+  padding: 60px 55px;
+  box-shadow: 0px 2px 6px 0px #19213D1A;
+border: 1px solid #F1F2F9
+  
+}
+
+.contact-form label {
+  font-family: var(--font-family-primary);
+font-weight: 500;
+font-size: 13.45px;
+line-height: 17.36px;
+letter-spacing: 0.3px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"] , textarea {
+  padding: 18px 24px;
+  border-radius: 50px;
+  width: 100%;
+  margin-top: 12px;
+  font-size: 15px;
+  color: #252525!important;
+  background: #F8F9FA;
+  margin-bottom: 32px;
+  transition: border 0.2s;
+}
+.input-icon-wrapper {
+  position: relative;
+  margin-bottom: 13px;
+}
+
+.input-icon-img {
+  position: absolute;
+  left: 16px;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 21px;
+  height: 21px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+
+
+.contact-form input[type="text"],
+.contact-form input[type="email"] , textarea{
+  padding-left: 42px; /* add space for icon */
+}
+
+.contact-form input:focus {
+  border: 1.5px solid #3164F4;
+  outline: none;
+}
+.top-img{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.bottom-img{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.contact-left-panel{
+  position: relative;
+}
+
+
