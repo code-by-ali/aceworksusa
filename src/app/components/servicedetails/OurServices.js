@@ -18,7 +18,7 @@ export default function OurServices() {
         <div className="container">
              <badge className="badge-blue m-auto">Services</badge>
 
-         <h3>
+         <h3 className="!text-3xl sm:!text-4xl xl:!text-5xl">
           Services in Digital Strategy <br/> Development
          </h3>
          <p>

@@ -754,7 +754,7 @@ a i {
 .service-banner .badge-orange{
 transform: rotate(0);
 }
-.service-banner h3{
+.service-banner h1{
 color: #252525;
 font-weight: 600;
 margin-bottom: 19px;
@@ -1082,6 +1082,33 @@ letter-spacing: 0.3px;
 }
 .contact-left-panel{
   position: relative;
+}
+
+@media screen and (max-width: 767px) {
+ .service-banner p{
+  margin-bottom: 20px;
+  margin-top: 20px;
+ }
+ .service-right {
+  margin-top: 20px;
+ }
+ .info-det-box{
+  left: -10px;
+  padding: 16px 16px 0px 16px;
+ }
+ .info-det-box ul li{
+  margin-bottom: 15px;
+ }
+ .our-services p{
+  font-size: 16px;
+ }
+ .case-study-box p{
+  font-size: 18px;
+line-height: 24px;
+ }
+ .contact-header h3{
+  margin-bottom: 0.5em;
+ }
 }
 
 

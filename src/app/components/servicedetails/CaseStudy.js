@@ -18,7 +18,7 @@ export default function CaseStudy() {
                 <div className="right-column">
                     <badge className="badge-blue mb-2" >
 Case study                  </badge>
-                     <h3 className="">
+                     <h3 className="!text-3xl sm:!text-4xl xl:!text-5xl">
           Developed a Tailored
 Digital Strategy for our
 client Lorem Inc.
@@ -33,7 +33,7 @@ within six months.
                 </p>
           </div>
            {/* Call to Action Buttons */}
-            <div className="flex flex-wrap text-sm sm:text-base mt-10 gap-4">
+            <div className="flex flex-wrap text-sm sm:text-base mt-md-10 my-4 gap-4">
               <a
                 href="#"
                 className="bg-primary  font-semibold px-6 py-3 rounded-full  hover:bg-gray-200 transition"

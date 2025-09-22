@@ -11,7 +11,7 @@ const ContactUs = () => (
 <div className="contact-header">
       <badge className="badge-blue mb-2 m-auto" >
 Contact Us                </badge>
-      <h3>
+      <h3 className="!text-3xl sm:!text-4xl xl:!text-5xl">
         Get in touch with <br />
         acework now today
       </h3>
@@ -35,7 +35,7 @@ Contact Us                </badge>
                           </Image>
                           <Image src="/assets/services/bottom-img.svg" className="bottom-img"  width={386} height={283} alt="">
                           </Image>
-        <h3>
+        <h3 className="">
           Have a Concept in Mind?<br/>
           Don't Hesitate to Contact with Us!
         </h3>

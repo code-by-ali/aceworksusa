@@ -20,7 +20,7 @@ export default function QuickCall() {
              <div className="col-md-5">
                  <div className="right-column">
                     
-                     <h3 className="">
+                     <h3 className="!text-3xl sm:!text-4xl xl:!text-5xl">
            Highly rated 4.9 out
 of 5 by 1200+
 entrepreneurs just
@@ -34,7 +34,7 @@ our exceptional service firsthand.
                 </div>
                 <div className="review">
                     <div className="row">
-                                    <div className="col-md-4" >
+                                    <div className="col-4" >
                                         <div className="review-content">
 
                                         <Image src="assets/services/clientlogo2.svg" className="my-2"  width={51} height={51} 
@@ -45,7 +45,7 @@ our exceptional service firsthand.
                                             
                                         </div>
                                     </div>
-                                    <div className="col-md-4" >
+                                    <div className="col-4" >
                                         <div className="review-content">
 
                                         <Image src="assets/services/clientlogo1.svg" className="my-2"  width={51} height={51} 

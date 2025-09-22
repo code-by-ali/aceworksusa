@@ -23,15 +23,15 @@ export default function Banner() {
                 <div className="right-column">
                     <badge className="badge-orange mb-2" >
 Digital Strategy Development                    </badge>
-                     <h3 className="">
+                     <h1 className="!text-4xl sm:!text-5xl lg:!text-6xl">
            Transformative Digital
 Strategy Development
-          </h3>
+          </h1>
           <p>
             Acewrok's Digital Strategy Development service is designed to create a comprehensive roadmap that aligns with your business goals.
           </p>
            {/* Call to Action Buttons */}
-            <div className="flex flex-wrap text-sm sm:text-base mt-10 gap-4">
+            <div className="flex flex-wrap text-sm sm:text-base mt-md-10 gap-4">
               <a
                 href="#"
                 className="bg-primary  font-semibold px-6 py-3 rounded-full  hover:bg-gray-200 transition"
