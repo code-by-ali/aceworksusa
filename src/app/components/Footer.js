@@ -1,125 +1,173 @@
 import Link from "next/link";
-import styles from "./header-footer.module.css";
 import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className={`${styles.footer} bg-[#2b6396] text-white  relative`}>
-      <div className="container">
-        <div className="row">
+    <footer className="!bg-[#2b6396] !text-white !relative !py-12 !px-4">
+      <div className="!max-w-7xl !mx-auto">
+        <div className="!grid !grid-cols-1 md:!grid-cols-4 lg:!grid-cols-12 !gap-8 !mb-8">
           {/* Column 1: Brand & Newsletter */}
-          <div className="col-md-6 ">
-            <div className="pr-50">
-              <h2 className={`font-bold text-xl text-white ${styles.logotext}`}>
-                Aceworkusa
-              </h2>
-              <p className="">
-                We simplify marketing with tools to help you budget and grow
-                wealth. Take control of your marketing effortlessly and
-                confidently.
-              </p>
-              {/* Newsletter Subscribe */}
-              <form>
-                <div className="flex flex-col md:flex-row justify-between items-center w-max bg-white rounded-4xl p-1.5 pl-3">
-                  <input
-                    type="email"
-                    placeholder="Email Address"
-                    className="p-2 rounded-l-full outline-none text-gray-800 flex-1"
-                    aria-label="Email Address"
-                  />
-                  <button type="submit" className={styles.subscribeBtn + "  "}>
-                    Subscribe
-                  </button>
-                </div>
-              </form>
-            </div>
+          <div className="lg:!col-span-6 md:!col-span-4 !pr-0 lg:!pr-12 !max-w-3xl">
+            <h2 className="!font-bold !text-2xl lg:!text-3xl !text-white !mb-4">
+              Aceworkusa
+            </h2>
+            <p className="!text-white !opacity-90 !mb-6 !text-sm lg:!text-base">
+              We simplify marketing with tools to help you budget and grow
+              wealth. Take control of your marketing effortlessly and
+              confidently.
+            </p>
+            {/* Newsletter Subscribe */}
+            <form className="!w-full !max-w-md">
+              <div className="!flex !flex-col sm:!flex-row !items-center !w-full !bg-white !rounded-full !p-2 sm:!pl-4 !gap-2 sm:!gap-0">
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  className="!p-3 sm:!p-2 !rounded-full sm:!rounded-l-full sm:!rounded-r-none !outline-none !text-gray-800 !w-full sm:!flex-1 !min-w-0 !border-0 !text-center sm:!text-left"
+                  aria-label="Email Address"
+                />
+                <button
+                  type="submit"
+                  className="!bg-orange-500 hover:!bg-orange-600 !text-white !px-8 sm:!px-6 !py-3 sm:!py-2.5 !rounded-full !font-medium !transition-colors !whitespace-nowrap"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </form>
           </div>
+
           {/* Column 2: Navigation */}
-          <div className="col-md-2">
-            <h3 className="">HOME</h3>
-            <ul className="space-y-1 text-sm opacity-90">
-              <li>
-                <Link href="/about">About us</Link>
+          <div className="lg:!col-span-2 md:!col-span-1">
+            <h3 className="!font-bold !text-lg !mb-4 !text-white">HOME</h3>
+            <ul className="!space-y-2 !text-sm !opacity-90">
+              <li className="hover:!opacity-100 !transition-opacity">
+                <Link href="/about" className="!text-white !no-underline">
+                  About us
+                </Link>
               </li>
-              <li>
-                <Link href="/pricing">Pricing</Link>
+              <li className="hover:!opacity-100 !transition-opacity">
+                <Link href="/pricing" className="!text-white !no-underline">
+                  Pricing
+                </Link>
               </li>
-              <li>
-                <Link href="/location">Our Location</Link>
+              <li className="hover:!opacity-100 !transition-opacity">
+                <Link href="/location" className="!text-white !no-underline">
+                  Our Location
+                </Link>
               </li>
-              <li>
-                <Link href="/contact">Contact us</Link>
+              <li className="hover:!opacity-100 !transition-opacity">
+                <Link href="/contact" className="!text-white !no-underline">
+                  Contact us
+                </Link>
               </li>
             </ul>
           </div>
+
           {/* Column 3: SEO */}
-          <div className="col-md-2">
-            <h3 className="">SEO</h3>
-            <ul className="space-y-1 text-sm opacity-90">
-              <li>
-                <Link href="/blog">Blog</Link>
+          <div className="lg:!col-span-2 md:!col-span-1">
+            <h3 className="!font-bold !text-lg !mb-4 !text-white">SEO</h3>
+            <ul className="!space-y-2 !text-sm !opacity-90">
+              <li className="hover:!opacity-100 !transition-opacity">
+                <Link href="/blog" className="!text-white !no-underline">
+                  Blog
+                </Link>
               </li>
-              <li>
-                <Link href="/blog-details">Blog Details</Link>
+              <li className="hover:!opacity-100 !transition-opacity">
+                <Link
+                  href="/blog-details"
+                  className="!text-white !no-underline"
+                >
+                  Blog Details
+                </Link>
               </li>
-              <li>
-                <Link href="/testimonial">Testimonial</Link>
+              <li className="hover:!opacity-100 !transition-opacity">
+                <Link href="/testimonial" className="!text-white !no-underline">
+                  Testimonial
+                </Link>
               </li>
-              <li>
-                <Link href="/help-center">Help Center</Link>
+              <li className="hover:!opacity-100 !transition-opacity">
+                <Link href="/help-center" className="!text-white !no-underline">
+                  Help Center
+                </Link>
               </li>
             </ul>
           </div>
+
           {/* Column 4: Info */}
-          <div className="col-md-2">
-            <h3 className="">Info</h3>
-            <ul className="space-y-1 text-sm opacity-90">
-              <li>
-                <Link href="/privacy-policy">Privacy Policy</Link>
+          <div className="lg:!col-span-2 md:!col-span-1">
+            <h3 className="!font-bold !text-lg !mb-4 !text-white">Info</h3>
+            <ul className="!space-y-2 !text-sm !opacity-90">
+              <li className="hover:!opacity-100 !transition-opacity">
+                <Link
+                  href="/privacy-policy"
+                  className="!text-white !no-underline"
+                >
+                  Privacy Policy
+                </Link>
               </li>
-              <li>
-                <Link href="/terms">Terms & Conditions</Link>
+              <li className="hover:!opacity-100 !transition-opacity">
+                <Link href="/terms" className="!text-white !no-underline">
+                  Terms & Conditions
+                </Link>
               </li>
             </ul>
           </div>
         </div>
 
         {/* Divider */}
-        <hr className=" container " />
+        <hr className="!border-1 !border-[#E5E7E6] !my-8" />
 
         {/* Bottom row: copyright & socials */}
-        <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row gap-3 md:gap-0 justify-between items-center">
-          <span className={`${styles.copyright}`}>
+        <div className="!flex !flex-col md:!flex-row !gap-4 md:!gap-0 !justify-between !items-center">
+          <span className="!text-sm !text-white !opacity-90 !text-center md:!text-left">
             © Copyright 2025, All Rights Reserved by aceworkusa
           </span>
+
           {/* Social Icons */}
-          <div className="flex gap-4 mt-2 md:mt-0">
-            <a href="https://facebook.com" target="_blank" rel="noopener">
+          <div className="!flex !gap-4">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="!transition-transform hover:!scale-110"
+            >
               <Image
-                src="assets/facebook.svg"
-                alt=""
+                src="/assets/facebook.svg"
+                alt="Facebook"
                 width={40}
                 height={40}
                 unoptimized
-              ></Image>
+                className="!w-10 !h-10"
+              />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener">
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="!transition-transform hover:!scale-110"
+            >
               <Image
-                src="assets/x.svg"
+                src="/assets/x.svg"
                 width={40}
                 height={40}
                 unoptimized
-                alt=""
-              ></Image>
+                alt="X (Twitter)"
+                className="!w-10 !h-10"
+              />
             </a>
-            <a href="#" aria-label="More">
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="!transition-transform hover:!scale-110"
+            >
               <Image
-                src="assets/instagram.svg"
+                src="/assets/instagram.svg"
                 width={40}
                 height={40}
                 unoptimized
-                alt=""
-              ></Image>
+                alt="Instagram"
+                className="!w-10 !h-10"
+              />
             </a>
           </div>
         </div>
