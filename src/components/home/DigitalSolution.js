@@ -7,7 +7,7 @@ const cards1 = [
     title: "Full - Funnel Execution",
     description:
       "We don't just run ads, we design, strategize and optimize customer journey",
-    image: "/assets/fullfunnel.PNG",
+    image: "/assets/fullfunnel.png",
     height: "501",
     width: "330",
   },
