@@ -37,7 +37,7 @@ export default function LogoMarquee() {
               src={logo}
               alt={`Logo ${idx + 1}`}
               unoptimized
-              className="object-contain w-auto h-24 sm:h-20 lg:h-16"
+              className="object-contain w-auto h-10 sm:h-12 lg:h-16"
             />
           </div>
         ))}
@@ -59,7 +59,7 @@ export default function LogoMarquee() {
               src={logo}
               alt={`Logo ${idx + 1}`}
               unoptimized
-              className="object-contain w-auto h-24 sm:h-20 lg:h-16"
+              className="object-contain w-auto h-10 sm:h-12 lg:h-16"
             />
           </div>
         ))}
