@@ -1,6 +1,6 @@
 "use client";
 
-import Slider from "react-slick";
+import Marquee from "react-fast-marquee";
 import Image from "next/image";
 
 import trustedCompanyLogo1 from "../../../public/assets/trustedCompanyLogo1.png";
@@ -15,70 +15,49 @@ const logos = [
   trustedCompanyLogo3,
   trustedCompanyLogo4,
   trustedCompanyLogo5,
-  // duplicate for seamless loop
-  trustedCompanyLogo1,
-  trustedCompanyLogo2,
-  trustedCompanyLogo3,
-  trustedCompanyLogo4,
-  trustedCompanyLogo5,
 ];
 
-export default function LogoSlickSlider() {
-  const baseSettings = {
-    dots: false,
-    arrows: false,
-    autoplay: true,
-    infinite: true,
-    speed: 5000,
-    autoplaySpeed: 0,
-    cssEase: "linear",
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    pauseOnHover: false,
-    responsive: [
-      { breakpoint: 1280, settings: { slidesToShow: 4 } },
-      { breakpoint: 1024, settings: { slidesToShow: 3 } },
-      { breakpoint: 768, settings: { slidesToShow: 2 } },
-      { breakpoint: 640, settings: { slidesToShow: 1 } }, // integer
-    ],
-  };
-
-  const settings1 = { ...baseSettings };
-  const settings2 = { ...baseSettings, rtl: true };
-
+export default function LogoMarquee() {
   return (
-    <div className="flex flex-col gap-6 py-6">
-      {/* Top slider */}
-      <Slider {...settings1}>
+    <section className="py-8 sm:py-12 bg-white">
+      {/* Marquee - Left to Right */}
+      <Marquee gradient={false} speed={50} pauseOnHover={true} className="mb-6">
         {logos.map((logo, idx) => (
-          <div key={`top-${idx}`} className="px-2 sm:px-3 md:px-4 flex justify-center">
-            <div className="flex items-center justify-center flex-shrink-0 w-full max-w-[200px]">
-              <Image
-                src={logo}
-                alt={`Logo ${idx}`}
-                unoptimized
-                className="object-contain w-full h-auto"
-              />
-            </div>
+          <div
+            key={`logo-${idx}`}
+            className="flex items-center justify-center mx-6"
+          >
+            <Image
+              src={logo}
+              alt={`Logo ${idx + 1}`}
+              unoptimized
+              className="object-contain w-auto h-16 sm:h-20 md:h-24"
+            />
           </div>
         ))}
-      </Slider>
+      </Marquee>
 
-      {/* Bottom slider */}
-      <Slider {...settings2}>
+      {/* Marquee - Right to Left */}
+      <Marquee
+        gradient={false}
+        speed={50}
+        pauseOnHover={true}
+        direction="right"
+      >
         {logos.map((logo, idx) => (
-          <div key={`bottom-${idx}`} className="px-2 sm:px-3 md:px-4 flex justify-center">
-            <div className="flex items-center justify-center flex-shrink-0 w-full max-w-[200px]">
-              <Image
-                src={logo}
-                alt={`Logo ${idx}`}
-                unoptimized
-                className="object-contain w-full h-auto"
-              />
-            </div>
+          <div
+            key={`logo-rtl-${idx}`}
+            className="flex items-center justify-center mx-6"
+          >
+            <Image
+              src={logo}
+              alt={`Logo ${idx + 1}`}
+              unoptimized
+              className="object-contain w-auto h-16 sm:h-20 md:h-24"
+            />
           </div>
         ))}
-      </Slider>
-    </div>
+      </Marquee>
+    </section>
   );
 }

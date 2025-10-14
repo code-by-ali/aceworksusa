@@ -18,7 +18,7 @@ const HeroSection = () => {
         {/* Hero Content */}
         <div className="container mx-auto px-6 flex flex-col gap-8 pb-32 sm:pb-40">
           {/* Customer Review Badge */}
-          <div className="flex items-center gap-2 bg-white/10 rounded-full px-4 py-1 w-fit backdrop-blur">
+          <div className="flex items-center gap-2 bg-white/10 rounded-full px-8 py-1 w-fit backdrop-blur">
             <div className="flex -space-x-3">
               <Image
                 unoptimized
