@@ -1,8 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import accordionOpenIcon from "../../../public/assets/accordionOpenIcon.png";
-import Image from "next/image";
 
 const faqsData = {
   general: [
@@ -47,7 +45,7 @@ const FaqContent = () => {
   return (
     <div>
       {/* Tabs */}
-      <div className="flex flex-wrap justify-center gap-2 mt-12 w-[90%] md:w-[70%] mx-auto">
+      <div className="flex flex-wrap justify-center gap-2 mt-10 w-full md:w-[70%] mx-auto">
         {tabKeys.map((key, idx) => (
           <button
             key={key}
@@ -55,11 +53,11 @@ const FaqContent = () => {
               setActiveTab(key);
               setOpenIndex(null);
             }}
-            className={`!rounded-full px-6 py-2 text-sm sm:text-base font-bold border-2 w-[140px] !border-[#FF5E15] sm:w-[150px] transition-none
+            className={`rounded-full px-3.5 py-3.5 font-bold text-base border w-40 mr-2 transition-colors duration-300 shadow-none
               ${
                 activeTab === key
-                  ? "bg-[var(--primary-btn)] text-white border-[var(--primary-btn)]"
-                  : "bg-white text-[var(--primary-btn)] border-[var(--primary-btn)]"
+                  ? "bg-orange-500 text-white border-orange-500"
+                  : "bg-white text-orange-500 border-orange-500 hover:bg-orange-500 hover:text-white"
               }`}
           >
             {tabLabels[idx]}
@@ -68,38 +66,53 @@ const FaqContent = () => {
       </div>
 
       {/* Accordion */}
-      <div className="mt-8 md:mt-12 w-[90%] md:w-[70%] mx-auto">
+      <div className="mt-[30px] w-full md:w-[70%] mx-auto">
         {faqsData[activeTab].map((faq, idx) => (
-          <div key={idx} className="border-b border-gray-200 py-6">
+          <div key={idx} className="py-6 border-b border-[#e5e7e6]">
             <button
               onClick={() => toggleAccordion(idx)}
-              className="flex justify-between w-full text-left"
+              className="flex justify-between items-start w-full text-left focus:outline-none group cursor-pointer"
             >
-              <span className="font-bold text-lg sm:text-xl text-black">
+              <span className="font-bold text-xl md:text-2xl tracking-[-0.5px] text-primary flex-1 pr-4">
                 {faq.title}
               </span>
               <span
-                className={`transform transition-transform duration-300 ml-2 ${
-                  openIndex === idx ? "rotate-0" : "rotate-180"
+                className={`flex-shrink-0 transform transition-transform duration-300 ${
+                  openIndex === idx ? "rotate-180" : "rotate-0"
                 }`}
               >
-                <Image
-                  unoptimized
-                  src={accordionOpenIcon}
-                  alt="toggle"
-                  width={20} // ⬅️ increased size
-                  height={20}
-                  className="object-contain"
-                />
+                {/* Chevron Down Icon */}
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6"
+                >
+                  <path
+                    d="M6 9L12 15L18 9"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
               </span>
             </button>
-            {openIndex === idx && (
-              <div className="mt-3 pr-6">
-                <p className="text-[#25252580] !font-medium text-sm sm:text-base leading-relaxed">
+            <div
+              className={`overflow-hidden transition-all duration-300 ${
+                openIndex === idx
+                  ? "max-h-96 opacity-100 mt-3"
+                  : "max-h-0 opacity-0"
+              }`}
+            >
+              <div className="pr-[30px]">
+                <p className="text-[#25252580] font-medium text-sm md:text-base lg:text-lg leading-[29.52px] mb-0">
                   {faq.description}
                 </p>
               </div>
-            )}
+            </div>
           </div>
         ))}
       </div>

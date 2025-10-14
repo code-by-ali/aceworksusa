@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import styles from "../home.module.css";
+import styles from "./home.module.css";
 
 import cutomerimg from "../../../public/assets/customerImg.png";
 import check from "../../../public/assets/checkorange.svg";

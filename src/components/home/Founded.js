@@ -3,18 +3,18 @@ import Image from "next/image";
 
 const Founded = () => {
   return (
-    <section className="founded py-12">
-      <div className="container mx-auto px-4">
+    <section className="py-12 md:py-16 lg:py-20 px-4">
+      <div className="max-w-7xl mx-auto">
         {/* Top Box */}
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-20 founded-box-one">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-20 mb-12 lg:mb-20">
           <div className="w-full lg:w-2/3">
-            <h3 className="!text-3xl sm:!text-4xl xl:!text-5xl font-medium leading-snug">
+            <h3 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-medium tracking-[-2.48px] text-primary">
               Founded in 2016, we are a <br />
               California based independent <br />
               digital marketing agency.
             </h3>
           </div>
-          <div className="w-[160px] sm:w-[200px] lg:w-[257px]">
+          <div className="w-[160px] sm:w-[200px] lg:w-[257px] flex-shrink-0">
             <Image
               src="/assets/watchreel.png"
               width={257}
@@ -27,25 +27,26 @@ const Founded = () => {
         </div>
 
         {/* Bottom Box */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-16 founded-box-two">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-16">
           {/* Left text box */}
           <div className="w-full">
-            <div className="founded-text-left space-y-4">
-              <p className="text-sm sm:text-base md:text-lg">
+            <div className="space-y-6">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-grey leading-relaxed tracking-[0.4px]">
                 We strive to create content that not only informs but also
                 inspires action, helping businesses establish authority in their
                 industry.
               </p>
               <div className="grid grid-cols-2 items-center gap-4">
                 <div>
-                  <p className="text-xs sm:text-sm md:text-base">
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl text-grey tracking-[0.4px]">
                     We have raised more than
                   </p>
                 </div>
-                <div className="milion text-5xl sm:text-5xl md:text-5xl lg:text-8xl font-semibold">
+                <div className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extralight text-secondary">
                   5
-                  <span className="overline decoration-[3px] decoration-solid decoration-[#ff5e15]">
+                  <span className="relative">
                     M
+                    <span className="absolute top-0 left-0 w-full h-1 bg-secondary"></span>
                   </span>
                 </div>
               </div>
@@ -53,21 +54,21 @@ const Founded = () => {
           </div>
 
           {/* Middle image */}
-          <div className="w-full flex justify-center">
+          <div className="w-full flex justify-center items-start">
             <Image
               src="/assets/about.webp"
               width={480}
               height={436}
               alt="About Us"
               unoptimized
-              className="w-full max-w-xs sm:max-w-md lg:max-w-full h-auto"
+              className="w-full max-w-xs sm:max-w-md lg:max-w-full h-auto rounded-2xl"
             />
           </div>
 
           {/* Right content box */}
-          <div className="w-full flex flex-col justify-between">
+          <div className="max-w-3xs flex flex-col justify-between">
             <div>
-              <div className="team-box flex items-center gap-2 mb-3">
+              <div className="flex flex-col justify-center gap-2 mb-4">
                 <Image
                   src="/assets/team.png"
                   width={20}
@@ -75,16 +76,18 @@ const Founded = () => {
                   alt="Team"
                   unoptimized
                 />
-                <p className="text-xs sm:text-sm md:text-base">HUGE TEAM</p>
+                <p className="text-xs sm:text-sm md:text-base font-medium text-[#265A92] uppercase">
+                  HUGE TEAM
+                </p>
               </div>
-              <h6 className="team-h6 text-sm sm:text-base md:text-lg font-semibold">
+              <h6 className="text-lg sm:text-xl md:text-2xl font-extralight text-primary tracking-[-0.48px]">
                 Managing global business startups in 2024
               </h6>
             </div>
-            <div className="flex justify-end mt-6 lg:mt-0">
+            <div className="flex justify-start lg:justify-end mt-6 lg:mt-0">
               <a
                 href="#"
-                className="btn-orange text-xs sm:text-sm md:text-base"
+                className="inline-block bg-secondary text-white font-bold px-8 py-3 rounded-full text-sm sm:text-base"
               >
                 About Us
               </a>

@@ -4,7 +4,7 @@ import LogoSlickSlider from "./LogoSlickSlider";
 const CompaniesLogo = () => {
   return (
     <section className="logo-sec">
-      <div className="text-center font-light text-2xl">
+      <div className="text-center font-light text-2xl tracking-[-0.48px] text-primary">
         Trusted by top companies across industries
       </div>
       <div className="pt-4">
