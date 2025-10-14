@@ -10,85 +10,81 @@ import trustedCompanyLogo4 from "../../../public/assets/trustedCompanyLogo4.png"
 import trustedCompanyLogo5 from "../../../public/assets/trustedCompanyLogo5.png";
 
 const logos = [
-  trustedCompanyLogo1,
-  trustedCompanyLogo2,
-  trustedCompanyLogo3,
-  trustedCompanyLogo4,
-  trustedCompanyLogo5,
+  { src: trustedCompanyLogo1, name: "Logo 1" },
+  { src: trustedCompanyLogo2, name: "Logo 2" },
+  { src: trustedCompanyLogo3, name: "Logo 3" },
+  { src: trustedCompanyLogo4, name: "Logo 4" },
+  { src: trustedCompanyLogo5, name: "Logo 5" },
+  // Duplicate for seamless loop
+  { src: trustedCompanyLogo1, name: "Logo 1" },
+  { src: trustedCompanyLogo2, name: "Logo 2" },
+  { src: trustedCompanyLogo3, name: "Logo 3" },
+  { src: trustedCompanyLogo4, name: "Logo 4" },
+  { src: trustedCompanyLogo5, name: "Logo 5" },
 ];
 
 export default function LogoSlickSlider() {
-  const responsiveConfig = [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        infinite: true,
-      },
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-      },
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      },
-    },
-  ];
-
   const baseSettings = {
-    infinite: true,
-    speed: 4000, // slower continuous scroll
-    autoplay: true,
-    autoplaySpeed: 0, // immediate
-    cssEase: "linear", // smooth
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    arrows: false,
-    pauseOnHover: false,
     dots: false,
-    responsive: responsiveConfig,
+    arrows: false,
+    autoplay: true,
+    infinite: true,
+    speed: 5000,
+    autoplaySpeed: 0,
+    cssEase: "linear",
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    pauseOnHover: false,
+    responsive: [
+      { breakpoint: 1280, settings: { slidesToShow: 4 } },
+      { breakpoint: 1024, settings: { slidesToShow: 3 } },
+      { breakpoint: 768, settings: { slidesToShow: 2 } },
+      { breakpoint: 640, settings: { slidesToShow: 1.5 } },
+    ],
   };
 
-  const settings1 = { ...baseSettings, rtl: true }; // Top slider → right
-  const settings2 = { ...baseSettings, rtl: false }; // Bottom slider → left
-
-  // 🔑 Duplicate logos enough times to fill viewport continuously
-  const loopedLogos = Array(4).fill(logos).flat();
+  // First slider goes left to right (default)
+  const settings1 = { ...baseSettings };
+  
+  // Second slider goes right to left
+  const settings2 = { ...baseSettings, rtl: true };
 
   return (
     <div className="flex flex-col gap-6 py-6">
-      {/* Top slider */}
+      {/* Top slider - Left to Right */}
       <Slider {...settings1}>
-        {loopedLogos.map((src, idx) => (
-          <div key={`top-${idx}`} className="flex justify-center px-6">
-            <Image
-              unoptimized
-              src={src}
-              alt={`Logo ${idx + 1}`}
-              className="w-[100px] sm:w-[140px] md:w-[160px] h-auto object-contain"
-            />
+        {logos.map((item, idx) => (
+          <div key={`top-${idx}`} className="px-3 sm:px-4 md:px-6">
+            <div className="flex items-center justify-center h-24 sm:h-24 lg:h-28">
+              <Image
+                unoptimized
+                src={item.src}
+                alt={item.name}
+                width={200}
+                height={90}
+                className="object-contain opacity-90 hover:opacity-100 transition-opacity duration-300 w-full max-w-[160px] sm:max-w-[180px] md:max-w-[200px] h-auto"
+                style={{ minWidth: '120px' }}
+              />
+            </div>
           </div>
         ))}
       </Slider>
 
-      {/* Bottom slider */}
+      {/* Bottom slider - Right to Left */}
       <Slider {...settings2}>
-        {loopedLogos.map((src, idx) => (
-          <div key={`bottom-${idx}`} className="flex justify-center px-6">
-            <Image
-              unoptimized
-              src={src}
-              alt={`Logo ${idx + 1}`}
-              className="w-[100px] sm:w-[140px] md:w-[160px] h-auto object-contain"
-            />
+        {logos.map((item, idx) => (
+          <div key={`bottom-${idx}`} className="px-3 sm:px-4 md:px-6">
+            <div className="flex items-center justify-center h-24 sm:h-24 lg:h-28">
+              <Image
+                unoptimized
+                src={item.src}
+                alt={item.name}
+                width={200}
+                height={90}
+                className="object-contain opacity-90 hover:opacity-100 transition-opacity duration-300 w-full max-w-[160px] sm:max-w-[180px] md:max-w-[200px] h-auto"
+                style={{ minWidth: '120px' }}
+              />
+            </div>
           </div>
         ))}
       </Slider>
