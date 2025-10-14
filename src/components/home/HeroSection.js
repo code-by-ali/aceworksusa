@@ -18,8 +18,8 @@ const HeroSection = () => {
         {/* Hero Content */}
         <div className="container mx-auto px-6 flex flex-col gap-8 pb-32 sm:pb-40">
           {/* Customer Review Badge */}
-          <div className="flex items-center gap-2 bg-white/10 rounded-full px-8 py-1 w-fit backdrop-blur">
-            <div className="flex -space-x-3">
+          <div className="flex items-center gap-2 bg-white/10 rounded-full px-8 py-4 w-fit backdrop-blur">
+            <div className="flex -space-x-3 relative"> 
               <Image
                 unoptimized
                 src={cutomerimg}
@@ -34,7 +34,7 @@ const HeroSection = () => {
                 src={check}
                 width={32}
                 height={32}
-                className="check-orange"
+                className="absolute top-0 right-0"
                 alt="Verified"
               />
               <div className="text-white font-semibold ml-3 text-2xl">

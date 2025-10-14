@@ -9,7 +9,13 @@ import trustedCompanyLogo3 from "../../../public/assets/trustedCompanyLogo3.png"
 import trustedCompanyLogo4 from "../../../public/assets/trustedCompanyLogo4.png";
 import trustedCompanyLogo5 from "../../../public/assets/trustedCompanyLogo5.png";
 
+// Duplicate logos for seamless scroll
 const logos = [
+  trustedCompanyLogo1,
+  trustedCompanyLogo2,
+  trustedCompanyLogo3,
+  trustedCompanyLogo4,
+  trustedCompanyLogo5,
   trustedCompanyLogo1,
   trustedCompanyLogo2,
   trustedCompanyLogo3,
@@ -31,7 +37,7 @@ export default function LogoMarquee() {
               src={logo}
               alt={`Logo ${idx + 1}`}
               unoptimized
-              className="object-contain w-auto h-16 sm:h-20 md:h-24"
+              className="object-contain w-auto h-24 sm:h-20 lg:h-16"
             />
           </div>
         ))}
@@ -53,7 +59,7 @@ export default function LogoMarquee() {
               src={logo}
               alt={`Logo ${idx + 1}`}
               unoptimized
-              className="object-contain w-auto h-16 sm:h-20 md:h-24"
+              className="object-contain w-auto h-24 sm:h-20 lg:h-16"
             />
           </div>
         ))}
