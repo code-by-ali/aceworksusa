@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import BadgeOrange from "../common/BadgeOrange";
+import CommonImage from "@/src/components/common/CommonImage";
+import RealResultImg from "@/public/assets/home-real-result-img-1.svg";
 
 const card = [
   {
@@ -23,11 +25,11 @@ const RealResult = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-12">
           {/* Image Section */}
-          <div className="w-full lg:w-1/2 flex justify-center lg:justify-start order-1">
-            <Image
+          <div className="bg-[#F8F9FA] rounded-2xl w-full lg:w-1/2 flex justify-center lg:justify-start order-1">
+            <CommonImage
               unoptimized
               alt="Real Results Illustration"
-              src="/assets/resultimg.png"
+              src={RealResultImg.src || RealResultImg}
               className="w-full h-auto max-w-md lg:max-w-full"
               width={400}
               height={400}
