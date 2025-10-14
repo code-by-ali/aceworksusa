@@ -44,7 +44,7 @@ const DigitalSolution = () => {
         {/* Header */}
         <div className="flex flex-col items-center mb-12 lg:mb-16">
           <BadgeBlue className="mx-auto">Why Choose Acework</BadgeBlue>
-          <h3 className="text-center text-3xl sm:text-4xl xl:text-5xl font-semibold tracking-[-2px] mb-4">
+          <h3 className="text-center text-3xl sm:text-4xl xl:text-5xl font-semibold tracking-[-2px] mb-4 text-primary">
             Digital solution for <br className="hidden lg:block" /> your growth
           </h3>
           <p className="text-center text-description font-medium text-base md:text-lg max-w-4xl">
