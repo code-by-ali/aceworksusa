@@ -78,7 +78,7 @@ export default function ClientReview() {
                   <CommonImage
                     src={item.logo.src || item.logo}
                     alt={item.name}
-                    className="object-contain w-full h-full max-w-[220px] sm:max-w-[160px] md:max-w-[140px] lg:max-w-[160px]"
+                    className="object-contain max-w-[220px] sm:max-w-[160px] md:max-w-[140px] lg:max-w-[160px]"
                   />
                 </div>
               </div>

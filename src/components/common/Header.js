@@ -34,7 +34,9 @@ export default function Header() {
 
   return (
     <header
-      className={`w-full font-bold p-4 relative z-[999] bg-white !dark:bg-white`}
+      className={`w-full font-bold p-4 relative z-[999] transition-colors duration-300 ${
+        isHomePage ? "bg-transparent" : "bg-white"
+      } !dark:bg-white`}
     >
       {/* Desktop Layout */}
       <nav className="hidden lg:flex mx-auto px-4 justify-between items-center h-16 relative">
