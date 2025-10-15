@@ -4,7 +4,7 @@ import BadgeBlue from "../common/BadgeBlue";
 
 const Faq = () => {
   return (
-    <section className="py-20 px-4">
+    <section className="py-20 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
         <BadgeBlue className="mx-auto mb-2">FAQ</BadgeBlue>
 

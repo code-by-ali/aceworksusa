@@ -8,7 +8,7 @@ import AboutBannerImg4 from "@/public/assets/about-us-banner-img-4.svg";
 
 export default function Aboutbanner() {
   return (
-    <div>
+    <div className="bg-white">
       {/* Hero Section */}
       <section className="pt-20 pb-32 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
