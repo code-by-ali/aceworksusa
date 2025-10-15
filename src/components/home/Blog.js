@@ -3,21 +3,25 @@
 import React from "react";
 import Image from "next/image";
 import BadgeBlue from "../common/BadgeBlue";
+import BlogImage1 from "@/public/assets/home-blog-image-1.svg";
+import BlogImage2 from "@/public/assets/home-blog-image-2.svg";
+import BlogImage3 from "@/public/assets/home-blog-image-3.svg";
+import CommonImage from "../common/CommonImage";
 
 const blog = [
   {
-    image: "/assets/blog1.png",
-    date: "Aug 20, 2025",
+    image: BlogImage1,
+    date: "March 10, 2025",
     title: "When to Call an Expert for Designing Services.",
   },
   {
-    image: "/assets/blog2.png",
-    date: "Aug 18, 2025",
+    image: BlogImage2,
+    date: "February 2 8, 2025",
     title: "How to Maintain Your ROI System Year-Round",
   },
   {
-    image: "/assets/blog3.png",
-    date: "Aug 15, 2025",
+    image: BlogImage3,
+    date: "December 20, 2025",
     title: "Understanding the Importance of Regular Organic Leads",
   },
 ];
@@ -47,13 +51,9 @@ const Blog = () => {
         {/* Blogs Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {blog.map((item, idx) => (
-            <div
-              key={idx}
-              className="bg-[#F5F7F9] rounded-2xl overflow-hidden"
-            >
-              <Image
-                unoptimized
-                src={item.image}
+            <div key={idx} className="bg-[#F5F7F9] rounded-2xl overflow-hidden">
+              <CommonImage
+                src={item.image.src||item.image}
                 alt={item.title}
                 width={400}
                 height={300}

@@ -16,11 +16,11 @@ const about = () => {
       <ClientReview />
       <MakeBusiness />
       <OurPriority />
-      {/* <FutureBusiness />
+      <FutureBusiness />
       <OurTeam />
       <OurWork />
       <TansformBusiness />
-      <Faq /> */}
+      <Faq />
     </div>
   );
 };

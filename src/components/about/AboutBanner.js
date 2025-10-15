@@ -1,7 +1,10 @@
 "use client";
-import Image from "next/image";
 import BadgeBlue from "../common/BadgeBlue";
-import CommonImage from "../common/CommonImage"
+import CommonImage from "../common/CommonImage";
+import AboutBannerImg1 from "@/public/assets/about-us-banner-img-1.svg";
+import AboutBannerImg2 from "@/public/assets/about-us-banner-img-2.svg";
+import AboutBannerImg3 from "@/public/assets/about-us-banner-img-3.svg";
+import AboutBannerImg4 from "@/public/assets/about-us-banner-img-4.svg";
 
 export default function Aboutbanner() {
   return (
@@ -26,39 +29,35 @@ export default function Aboutbanner() {
           <div className="mt-12">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="space-y-4">
-                <Image
-                  src="/assets/about-1.png"
+                <CommonImage
+                  src={AboutBannerImg1.src || AboutBannerImg1}
                   alt="Team collaboration"
                   className="w-full rounded-2xl"
-                  unoptimized
                   width={500}
                   height={336}
                 />
-                <Image
-                  src="/assets/about-2.png"
+                <CommonImage
+                  src={AboutBannerImg2.src || AboutBannerImg2}
                   alt="Team meeting"
                   className="w-full rounded-2xl"
-                  unoptimized
                   width={500}
                   height={336}
                 />
               </div>
               <div className="flex items-center">
-                <Image
-                  src="/assets/about-3.png"
+                <CommonImage
+                  src={AboutBannerImg3.src || AboutBannerImg3}
                   alt="Team discussion"
                   className="w-full rounded-2xl"
-                  unoptimized
                   width={500}
                   height={336}
                 />
               </div>
               <div className="flex items-center">
-                <Image
-                  src="/assets/about-4.png"
+                <CommonImage
+                  src={AboutBannerImg4.src || AboutBannerImg4}
                   alt="Individual work"
                   className="w-full rounded-2xl"
-                  unoptimized
                   width={500}
                   height={336}
                 />

@@ -1,39 +1,46 @@
 "use client";
-import Image from "next/image";
 import BadgeBlue from "../common/BadgeBlue";
+import OurWorkImg1 from "@/public/assets/about-us-our-work-img-1.svg";
+import OurWorkImg2 from "@/public/assets/about-us-our-work-img-2.svg";
+import OurWorkImg3 from "@/public/assets/about-us-our-work-img-3.svg";
+import OurWorkImg4 from "@/public/assets/about-us-our-work-img-4.svg";
+import OurWorkImg5 from "@/public/assets/about-us-our-work-img-5.svg";
+import OurWorkImg6 from "@/public/assets/about-us-our-work-img-6.svg";
+import CommonImage from "../common/CommonImage";
+
 const work = [
   {
-    image: "/assets/work1.png",
+    image: OurWorkImg1,
     title: "Cloncy",
     subtitle: "Web Design",
     year: "2025",
   },
   {
-    image: "/assets/work2.png",
+    image: OurWorkImg2,
     title: "Taniza",
     subtitle: "Branding",
     year: "2025",
   },
   {
-    image: "/assets/work3.png",
+    image: OurWorkImg3,
     title: "Flopdy",
     subtitle: "Branding",
     year: "2025",
   },
   {
-    image: "/assets/work4.png",
+    image: OurWorkImg4,
     title: "Animac",
     subtitle: "Web Design",
     year: "2025",
   },
   {
-    image: "/assets/work5.png",
+    image: OurWorkImg5,
     title: "Idenvy",
     subtitle: "Branding",
     year: "2025",
   },
   {
-    image: "/assets/work6.png",
+    image: OurWorkImg6,
     title: "Devus",
     subtitle: "Branding",
     year: "2025",
@@ -47,8 +54,8 @@ export default function OurWork() {
       <section className="py-16 sm:py-20 lg:py-28 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 lg:mb-16">
-            <BadgeBlue className="mx-auto mb-6">Works</BadgeBlue>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+            <BadgeBlue className="mx-auto">Works</BadgeBlue>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-primary tracking-[-1px] leading-tight">
               The Amazing Work <br />
               From Aceworks
             </h2>
@@ -62,14 +69,11 @@ export default function OurWork() {
                 className="group cursor-pointer transition-transform duration-300 hover:-translate-y-2"
               >
                 {/* Image Container */}
-                <div className="relative overflow-hidden rounded-2xl mb-4 bg-gray-100">
-                  <Image
-                    src={item.image}
-                    width={400}
-                    height={450}
+                <div className="relative overflow-hidden rounded-2xl mb-4 ">
+                  <CommonImage
+                    src={item.image.src || item.image}
                     alt={item.title}
                     className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
-                    unoptimized
                   />
                 </div>
 

@@ -1,15 +1,16 @@
 "use client";
-
 import React, { useState } from "react";
 import Image from "next/image";
 import BadgeOrange from "../common/BadgeOrange";
+import SeoImage1 from "@/public/assets/home-seo-service-img-1.svg";
+import CommonImage from "../common/CommonImage";
 
 const services = [
   {
     title: "Local SEO Marketing",
     number: "001",
     tagline: "12 Projects",
-    image: "/assets/local-service.png",
+    image: SeoImage1,
     description:
       "Maximize your presence on search engine results pages on a local scale",
   },
@@ -17,7 +18,7 @@ const services = [
     title: "Google My Business",
     number: "002",
     tagline: "2 Projects",
-    image: "/assets/local-service.png",
+    image: SeoImage1,
     description:
       "Over 625 active projects demonstrate our capacity to scale globally and reliably",
   },
@@ -25,7 +26,7 @@ const services = [
     title: "Link Building & Content",
     number: "003",
     tagline: "3 Projects",
-    image: "/assets/local-service.png",
+    image: SeoImage1,
     description:
       "Over 625 active projects demonstrate our capacity to scale globally and reliably",
   },
@@ -33,7 +34,7 @@ const services = [
     title: "Email Marketing",
     number: "004",
     tagline: "4 Projects",
-    image: "/assets/local-service.png",
+    image: SeoImage1,
     description:
       "Over 625 active projects demonstrate our capacity to scale globally and reliably",
   },
@@ -41,7 +42,7 @@ const services = [
     title: "Design & Branding",
     number: "005",
     tagline: "5 Projects",
-    image: "/assets/local-service.png",
+    image: SeoImage1,
     description:
       "Over 625 active projects demonstrate our capacity to scale globally and reliably",
   },
@@ -49,7 +50,7 @@ const services = [
     title: "ORM Management",
     number: "006",
     tagline: "6 Projects",
-    image: "/assets/local-service.png",
+    image: SeoImage1,
     description:
       "Over 625 active projects demonstrate our capacity to scale globally and reliably",
   },
@@ -147,10 +148,9 @@ const SeoServices = () => {
                 >
                   <div className="relative py-5 px-10 pb-[14px]">
                     <div className="flex flex-col md:flex-row gap-6 items-start mb-2">
-                      <Image
-                        unoptimized
+                      <CommonImage
                         alt={service.title}
-                        src={service.image}
+                        src={service.image.src || service.image}
                         height={104}
                         width={162}
                         className="rounded-lg object-contain"

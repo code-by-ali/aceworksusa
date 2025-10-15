@@ -1,5 +1,8 @@
 import React from "react";
-import Image from "next/image";
+import FoundedImage1 from "@/public/assets/home-founded-image-1.svg";
+import FoundedImage2 from "@/public/assets/home-founded-image-2.svg";
+import FoundedImage3 from "@/public/assets/home-founded-image-3.svg";
+import CommonImage from "../common/CommonImage";
 
 const Founded = () => {
   return (
@@ -15,12 +18,11 @@ const Founded = () => {
             </h3>
           </div>
           <div className="w-[160px] sm:w-[200px] lg:w-[257px] flex-shrink-0">
-            <Image
-              src="/assets/watchreel.png"
+            <CommonImage
+              src={FoundedImage1.src || FoundedImage1}
               width={257}
               height={165}
               alt="Watch Reel"
-              unoptimized
               className="w-full h-auto"
             />
           </div>
@@ -55,12 +57,11 @@ const Founded = () => {
 
           {/* Middle image */}
           <div className="w-full flex justify-center items-start">
-            <Image
-              src="/assets/about.webp"
+            <CommonImage
+              src={FoundedImage2.src || FoundedImage2}
               width={480}
               height={436}
               alt="About Us"
-              unoptimized
               className="w-full max-w-xs sm:max-w-md lg:max-w-full h-auto rounded-2xl"
             />
           </div>
@@ -69,12 +70,11 @@ const Founded = () => {
           <div className="max-w-3xs flex flex-col justify-between">
             <div>
               <div className="flex flex-col justify-center gap-2 mb-4">
-                <Image
-                  src="/assets/team.png"
+                <CommonImage
+                  src={FoundedImage3.src || FoundedImage3}
                   width={20}
                   height={20}
                   alt="Team"
-                  unoptimized
                 />
                 <p className="text-xs sm:text-sm md:text-base font-medium text-[#265A92] uppercase">
                   HUGE TEAM

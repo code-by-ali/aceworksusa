@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import BadgeOrange from "../common/BadgeOrange";
 import CommonImage from "../common/CommonImage";
 import OurPriorityImg1 from "../../../public/assets/about-us-our-priority-image-1.svg";

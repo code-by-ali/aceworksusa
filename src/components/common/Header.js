@@ -14,7 +14,7 @@ export default function Header() {
   const textColor = isHomePage ? "text-white" : "text-[#2b6396]";
   const hoverColor = isHomePage
     ? "hover:text-orange-400"
-    : "hover:text-orange-500";
+    : "hover:text-secondary";
 
   const navItems = ["about", "services", "blog", "contact", "all-pages"];
 
@@ -22,7 +22,7 @@ export default function Header() {
   useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = "hidden";
-      document.body.style.height = "100vh"; // prevent tiny scroll
+      document.body.style.height = "100vh";
     } else {
       document.body.style.overflow = "";
       document.body.style.height = "";
@@ -35,7 +35,8 @@ export default function Header() {
 
   return (
     <header className="w-full bg-transparent font-bold p-4 relative z-[999]">
-      <nav className="mx-auto px-4 flex justify-between items-center h-16 relative">
+      {/* Desktop Layout (lg and up) */}
+      <nav className="hidden lg:flex mx-auto px-4 justify-between items-center h-16 relative">
         {/* Logo */}
         <Link
           href="/"
@@ -45,12 +46,14 @@ export default function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center">
+        <div className="flex items-center">
           {navItems.map((item) => (
             <Link
               key={item}
               href={`/${item}`}
-              className={`ml-12 ${textColor} ${hoverColor} no-underline transition-colors`}
+              className={`ml-12 ${
+                pathname === `/${item}` ? "text-orange-500" : textColor
+              } ${hoverColor} no-underline transition-colors`}
             >
               {item.replace("-", " ").replace(/\b\w/g, (l) => l.toUpperCase())}
             </Link>
@@ -60,15 +63,60 @@ export default function Header() {
         {/* Desktop CTA */}
         <Link
           href="/start"
-          className="hidden md:inline-block bg-secondary text-white rounded-full px-6 py-3 z-50"
+          className="bg-secondary text-white rounded-full px-6 py-3 z-50"
         >
           Start Your Growth
+        </Link>
+      </nav>
+
+      {/* Tablet Layout (md to lg) */}
+      <div className="hidden md:block lg:hidden mx-auto px-4">
+        {/* First Row: Logo and CTA */}
+        <div className="flex justify-between items-center h-16">
+          <Link
+            href="/"
+            className={`${textColor} font-semibold text-lg md:text-xl no-underline`}
+          >
+            Aceworkusa
+          </Link>
+          <Link
+            href="/start"
+            className="bg-secondary text-white rounded-full px-6 py-3"
+          >
+            Start Your Growth
+          </Link>
+        </div>
+
+        {/* Second Row: Centered Nav Links */}
+        <div className="flex justify-center items-center gap-8 py-4">
+          {navItems.map((item) => (
+            <Link
+              key={item}
+              href={`/${item}`}
+              className={`${
+                pathname === `/${item}` ? "text-secondary" : textColor
+              } ${hoverColor} no-underline transition-colors text-sm`}
+            >
+              {item.replace("-", " ").replace(/\b\w/g, (l) => l.toUpperCase())}
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* Mobile Layout */}
+      <nav className="md:hidden mx-auto px-4 flex justify-between items-center h-16 relative">
+        {/* Logo */}
+        <Link
+          href="/"
+          className={`${textColor} font-semibold text-lg no-underline`}
+        >
+          Aceworkusa
         </Link>
 
         {/* Hamburger */}
         <button
           onClick={toggleMenu}
-          className="md:hidden z-[100] focus:outline-none relative"
+          className="z-[100] focus:outline-none relative"
           aria-label="Toggle menu"
         >
           <svg
@@ -107,7 +155,7 @@ export default function Header() {
             <Link
               key={item}
               href={`/${item}`}
-              className="text-white text-2xl font-semibold hover:text-orange-400 transition-colors"
+              className="text-white text-2xl font-semibold hover:text-secondary transition-colors"
               onClick={closeMenu}
             >
               {item.replace("-", " ").replace(/\b\w/g, (l) => l.toUpperCase())}

@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import BadgeOrange from "../common/BadgeOrange";
 import CommonImage from "@/src/components/common/CommonImage";
 import RealResultImg from "@/public/assets/home-real-result-img-1.svg";
@@ -27,7 +26,6 @@ const RealResult = () => {
           {/* Image Section */}
           <div className="bg-[#F8F9FA] rounded-2xl w-full lg:w-1/2 flex justify-center lg:justify-start order-1">
             <CommonImage
-              unoptimized
               alt="Real Results Illustration"
               src={RealResultImg.src || RealResultImg}
               className="w-full h-auto max-w-md lg:max-w-full"
