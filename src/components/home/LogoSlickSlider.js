@@ -1,5 +1,5 @@
 "use client";
-import Marquee from "react-fast-marquee";
+import { useState, useEffect } from "react";
 import CommonImage from "../common/CommonImage";
 
 import ClientLogo1 from "../../../public/assets/about-us-client-logo-1.svg";
@@ -9,7 +9,11 @@ import ClientLogo4 from "../../../public/assets/about-us-client-logo-4.svg";
 import ClientLogo5 from "../../../public/assets/about-us-client-logo-5.svg";
 import ClientIcon from "../../../public/assets/about-us-client-icon.svg";
 
-// Duplicate logos for seamless scrolling
+import dynamic from "next/dynamic";
+
+// Dynamically import Marquee with no SSR
+const Marquee = dynamic(() => import("react-fast-marquee"), { ssr: false });
+
 const logos = [
   ClientLogo1,
   ClientLogo2,
@@ -24,6 +28,11 @@ const logos = [
 ];
 
 export default function ClientReview() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null; // avoid SSR rendering
+
   return (
     <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-8 lg:px-12 bg-[#2B5A8C] overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -36,8 +45,8 @@ export default function ClientReview() {
           </h3>
         </div>
 
-        {/* Marquee - Left to Right */}
-        <Marquee gradient={false} speed={50} pauseOnHover={true} className="mb-8">
+        {/* Marquee */}
+        <Marquee gradient={false} speed={50} pauseOnHover className="mb-8">
           {logos.map((logo, idx) => (
             <div key={idx} className="flex items-center justify-center mx-6">
               <CommonImage
