@@ -49,19 +49,6 @@ export default function ClientReview() {
           ))}
         </Marquee>
 
-        {/* Marquee - Right to Left */}
-        <Marquee gradient={false} speed={50} pauseOnHover={true} direction="right">
-          {logos.map((logo, idx) => (
-            <div key={idx} className="flex items-center justify-center mx-6">
-              <CommonImage
-                src={logo.src || logo}
-                alt={`Client Logo ${idx + 1}`}
-                className="object-contain w-auto h-12 sm:h-16 md:h-20 lg:h-24"
-              />
-            </div>
-          ))}
-        </Marquee>
-
         {/* Button */}
         <div className="text-center mt-12 lg:mt-16">
           <button className="outline-none inline-flex items-center gap-2 text-white text-sm md:text-base font-medium cursor-pointer">
