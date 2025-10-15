@@ -31,23 +31,36 @@ export default function ClientReview() {
     arrows: false,
     autoplay: true,
     infinite: true,
-    speed: 6000, // very slow transition
-    autoplaySpeed: 0, // no delay between slides
-    cssEase: "linear", // continuous scroll
+    speed: 6000,
+    autoplaySpeed: 0,
+    cssEase: "linear",
     slidesToShow: 5,
     slidesToScroll: 1,
-    pauseOnHover: false, // keep moving
+    pauseOnHover: false,
     responsive: [
       { breakpoint: 1280, settings: { slidesToShow: 4 } },
       { breakpoint: 1024, settings: { slidesToShow: 3 } },
-      { breakpoint: 768, settings: { slidesToShow: 2 } },
-      { breakpoint: 640, settings: { slidesToShow: 1 } },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          speed: 5000,
+        },
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          speed: 4000,
+        },
+      },
     ],
   };
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 px-6 sm:px-8 lg:px-12 bg-[#2B5A8C] overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-8 lg:px-12 bg-[#2B5A8C] overflow-hidden">
       <div className="max-w-7xl mx-auto">
+        {/* Heading */}
         <div className="text-center mb-12 lg:mb-16">
           <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white leading-relaxed">
             2,500+ professionals, teams, and{" "}
@@ -56,16 +69,16 @@ export default function ClientReview() {
           </h3>
         </div>
 
-        {/* Smooth Continuous Logo Slider */}
+        {/* Logo Slider */}
         <div className="client-slider">
           <Slider {...settings}>
             {content.map((item, idx) => (
-              <div key={idx} className="px-4 sm:px-6">
-                <div className="flex items-center justify-center h-28 sm:h-24 lg:h-28">
+              <div key={idx} className="px-6 sm:px-8">
+                <div className="flex items-center justify-center h-36 sm:h-28 md:h-24 lg:h-28">
                   <CommonImage
                     src={item.logo.src || item.logo}
                     alt={item.name}
-                    className="object-contain max-w-full h-full"
+                    className="object-contain w-full h-full max-w-[220px] sm:max-w-[160px] md:max-w-[140px] lg:max-w-[160px]"
                   />
                 </div>
               </div>
@@ -73,6 +86,7 @@ export default function ClientReview() {
           </Slider>
         </div>
 
+        {/* Button */}
         <div className="text-center mt-12 lg:mt-16">
           <button className="outline-none inline-flex items-center gap-2 text-white text-sm md:text-base font-medium cursor-pointer">
             See Our Client Review

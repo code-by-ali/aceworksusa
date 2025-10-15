@@ -18,7 +18,6 @@ export default function Header() {
 
   const navItems = ["about", "services", "blog", "contact", "all-pages"];
 
-  // Lock body scroll when menu is open
   useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = "hidden";
@@ -34,8 +33,10 @@ export default function Header() {
   }, [menuOpen]);
 
   return (
-    <header className="w-full bg-transparent font-bold p-4 relative z-[999]">
-      {/* Desktop Layout (lg and up) */}
+    <header
+      className={`w-full font-bold p-4 relative z-[999] bg-white !dark:bg-white`}
+    >
+      {/* Desktop Layout */}
       <nav className="hidden lg:flex mx-auto px-4 justify-between items-center h-16 relative">
         {/* Logo */}
         <Link
@@ -45,7 +46,7 @@ export default function Header() {
           Aceworkusa
         </Link>
 
-        {/* Desktop Nav */}
+        {/* Nav Items */}
         <div className="flex items-center">
           {navItems.map((item) => (
             <Link
@@ -60,7 +61,7 @@ export default function Header() {
           ))}
         </div>
 
-        {/* Desktop CTA */}
+        {/* CTA */}
         <Link
           href="/start"
           className="bg-secondary text-white rounded-full px-6 py-3 z-50"
@@ -69,9 +70,8 @@ export default function Header() {
         </Link>
       </nav>
 
-      {/* Tablet Layout (md to lg) */}
+      {/* Tablet Layout */}
       <div className="hidden md:block lg:hidden mx-auto px-4">
-        {/* First Row: Logo and CTA */}
         <div className="flex justify-between items-center h-16">
           <Link
             href="/"
@@ -87,7 +87,6 @@ export default function Header() {
           </Link>
         </div>
 
-        {/* Second Row: Centered Nav Links */}
         <div className="flex justify-center items-center gap-8 py-4">
           {navItems.map((item) => (
             <Link
@@ -105,7 +104,6 @@ export default function Header() {
 
       {/* Mobile Layout */}
       <nav className="md:hidden mx-auto px-4 flex justify-between items-center h-16 relative">
-        {/* Logo */}
         <Link
           href="/"
           className={`${textColor} font-semibold text-lg no-underline`}
@@ -113,7 +111,6 @@ export default function Header() {
           Aceworkusa
         </Link>
 
-        {/* Hamburger */}
         <button
           onClick={toggleMenu}
           className="z-[100] focus:outline-none relative"
@@ -144,7 +141,7 @@ export default function Header() {
         </button>
       </nav>
 
-      {/* Fullscreen Mobile Menu */}
+      {/* Mobile Menu */}
       <div
         className={`fixed inset-0 z-[90] bg-[#2b6396] bg-opacity-95 backdrop-blur-lg transform transition-transform duration-300 ease-in-out ${
           menuOpen ? "translate-x-0" : "translate-x-full"
