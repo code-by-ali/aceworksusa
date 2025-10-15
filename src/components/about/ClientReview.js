@@ -1,7 +1,6 @@
 "use client";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import CommonImage from "../common/CommonImage";
+import dynamic from "next/dynamic";
 
 import ClientLogo1 from "../../../public/assets/about-us-client-logo-1.svg";
 import ClientLogo2 from "../../../public/assets/about-us-client-logo-2.svg";
@@ -9,54 +8,25 @@ import ClientLogo3 from "../../../public/assets/about-us-client-logo-3.svg";
 import ClientLogo4 from "../../../public/assets/about-us-client-logo-4.svg";
 import ClientLogo5 from "../../../public/assets/about-us-client-logo-5.svg";
 import ClientIcon from "../../../public/assets/about-us-client-icon.svg";
-import CommonImage from "../common/CommonImage";
 
-const content = [
-  { logo: ClientLogo1, name: "Invert" },
-  { logo: ClientLogo2, name: "Snowflake" },
-  { logo: ClientLogo3, name: "Proline" },
-  { logo: ClientLogo4, name: "Hitech" },
-  { logo: ClientLogo5, name: "Flash" },
-  // duplicate to create seamless loop
-  { logo: ClientLogo1, name: "Invert" },
-  { logo: ClientLogo2, name: "Snowflake" },
-  { logo: ClientLogo3, name: "Proline" },
-  { logo: ClientLogo4, name: "Hitech" },
-  { logo: ClientLogo5, name: "Flash" },
+// Dynamic import to avoid SSR issues
+const Marquee = dynamic(() => import("react-fast-marquee"), { ssr: false });
+
+// Duplicate logos for smooth scrolling
+const logos = [
+  ClientLogo1,
+  ClientLogo2,
+  ClientLogo3,
+  ClientLogo4,
+  ClientLogo5,
+  ClientLogo1,
+  ClientLogo2,
+  ClientLogo3,
+  ClientLogo4,
+  ClientLogo5,
 ];
 
 export default function ClientReview() {
-  const settings = {
-    dots: false,
-    arrows: false,
-    autoplay: true,
-    infinite: true,
-    speed: 6000,
-    autoplaySpeed: 0,
-    cssEase: "linear",
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    pauseOnHover: false,
-    responsive: [
-      { breakpoint: 1280, settings: { slidesToShow: 4 } },
-      { breakpoint: 1024, settings: { slidesToShow: 3 } },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          speed: 5000,
-        },
-      },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 1,
-          speed: 4000,
-        },
-      },
-    ],
-  };
-
   return (
     <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-8 lg:px-12 bg-[#2B5A8C] overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -69,22 +39,28 @@ export default function ClientReview() {
           </h3>
         </div>
 
-        {/* Logo Slider */}
-        <div className="client-slider">
-          <Slider {...settings}>
-            {content.map((item, idx) => (
-              <div key={idx} className="px-6 sm:px-8">
-                <div className="flex items-center justify-center h-36 sm:h-28 md:h-24 lg:h-28">
-                  <CommonImage
-                    src={item.logo.src || item.logo}
-                    alt={item.name}
-                    className="object-contain max-w-[220px] sm:max-w-[160px] md:max-w-[140px] lg:max-w-[160px]"
-                  />
-                </div>
-              </div>
-            ))}
-          </Slider>
-        </div>
+        {/* Marquee */}
+        <Marquee gradient={false} speed={50} pauseOnHover className="mb-8">
+          {logos.map((logo, idx) => (
+            <div
+              key={idx}
+              className="flex items-center justify-center mx-4 sm:mx-6"
+              style={{ flex: "0 0 auto" }} // prevent shrinking
+            >
+              <CommonImage
+                src={logo.src || logo}
+                alt={`Client Logo ${idx + 1}`}
+                style={{
+                  width: "120px", // fixed width on mobile
+                  height: "60px",
+                  maxWidth: "150px", // larger on bigger screens
+                  maxHeight: "80px",
+                }}
+                className="object-contain"
+              />
+            </div>
+          ))}
+        </Marquee>
 
         {/* Button */}
         <div className="text-center mt-12 lg:mt-16">
@@ -92,7 +68,7 @@ export default function ClientReview() {
             See Our Client Review
             <CommonImage
               src={ClientIcon.src || ClientIcon}
-              alt={"arrow-icon"}
+              alt="arrow-icon"
             />
           </button>
         </div>
