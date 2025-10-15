@@ -61,11 +61,11 @@ export default function ClientReview() {
           <Slider {...settings}>
             {content.map((item, idx) => (
               <div key={idx} className="px-4 sm:px-6">
-                <div className="flex items-center justify-center h-20 sm:h-24 lg:h-28">
+                <div className="flex items-center justify-center h-28 sm:h-24 lg:h-28">
                   <CommonImage
                     src={item.logo.src || item.logo}
                     alt={item.name}
-                    className="object-contain opacity-90 hover:opacity-100 transition-opacity duration-300 max-w-full h-auto"
+                    className="object-contain max-w-full h-full"
                   />
                 </div>
               </div>
