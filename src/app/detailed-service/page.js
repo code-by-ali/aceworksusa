@@ -6,9 +6,9 @@ import React from "react";
 const page = () => {
   return (
     <div>
-      {/* <DigitalStrategyHero />
+      <DigitalStrategyHero />
       <DigitalStrategyServices />
-      <CaseStudySection /> */}
+      <CaseStudySection />
     </div>
   );
 };

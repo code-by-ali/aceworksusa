@@ -45,8 +45,12 @@ export default function CaseStudySection() {
 
         {/* Right Card - Content Marketing */}
         <div className="bg-white border border-[#E2E4E9] rounded-2xl p-8 md:p-10 relative overflow-hidden">
-          <div className="flex flex-col gap-2 ">
-            <CommonImage src={CaseStudyImg1.src || CaseStudyImg1} />
+          <div className="flex flex-col gap-8 h-full">
+            <CommonImage
+              src={CaseStudyImg1.src || CaseStudyImg1}
+              alt={"Case Study Image"}
+              className="rounded-3xl"
+            />
             <p className="text-primary text-lg md:text-xl lg:text-2xl font-medium tracking-[-0.24px]">
               Elevating Gozaru Enterprises' Brand to Success
             </p>
