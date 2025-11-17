@@ -16,7 +16,7 @@ export default function Header() {
     ? "hover:text-orange-400"
     : "hover:text-secondary";
 
-  const navItems = ["about", "services", "blog", "contact", "all-pages"];
+  const navItems = ["about", "services", "blog", "contact"];
 
   useEffect(() => {
     if (menuOpen) {
@@ -65,7 +65,7 @@ export default function Header() {
 
         {/* CTA */}
         <Link
-          href="/start"
+          href="/contact"
           className="bg-secondary text-white rounded-full px-6 py-3 z-50"
         >
           Start Your Growth
@@ -82,7 +82,7 @@ export default function Header() {
             Aceworkusa
           </Link>
           <Link
-            href="/start"
+            href="/contact"
             className="bg-secondary text-white rounded-full px-6 py-3"
           >
             Start Your Growth
@@ -162,7 +162,7 @@ export default function Header() {
           ))}
 
           <Link
-            href="/start"
+            href="/contact"
             className="bg-secondary text-white rounded-full px-6 py-3 mt-6 text-center inline-block"
             onClick={closeMenu}
           >
