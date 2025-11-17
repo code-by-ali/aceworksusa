@@ -1,7 +1,9 @@
+import React from "react";
+import CalendlyConnect from "@/src/components/contact/CalendlyConnect";
+import ContactForm from "@/src/components/contact/ContactForm";
 import CaseStudySection from "@/src/components/detailed-service/CaseStudySection";
 import DigitalStrategyHero from "@/src/components/detailed-service/DigitalStrategyHero";
 import DigitalStrategyServices from "@/src/components/detailed-service/DigitalStrategyServices";
-import React from "react";
 
 const page = () => {
   return (
@@ -9,6 +11,8 @@ const page = () => {
       <DigitalStrategyHero />
       <DigitalStrategyServices />
       <CaseStudySection />
+      <CalendlyConnect />
+      <ContactForm />
     </div>
   );
 };
