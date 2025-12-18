@@ -16,7 +16,13 @@ export default function Header() {
     ? "hover:text-orange-400"
     : "hover:text-secondary";
 
-  const navItems = ["about", "services", "detailed-service", "contact"];
+  const navItems = [
+    "about",
+    "services",
+    "blogs",
+    "detailed-service",
+    "contact",
+  ];
 
   useEffect(() => {
     if (menuOpen) {
