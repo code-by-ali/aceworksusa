@@ -48,7 +48,7 @@ const BlogSection = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-16">
+    <div className="max-w-7xl bg-white mx-auto px-4 py-16">
       {/* Header Section */}
       <div className="flex flex-col  items-center mb-12">
         <BadgeBlue>Blogs</BadgeBlue>
