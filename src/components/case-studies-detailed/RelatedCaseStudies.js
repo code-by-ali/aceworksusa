@@ -1,6 +1,7 @@
 import React from "react";
 import BadgeBlue from "../common/BadgeBlue";
 import { ChevronRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const relatedStudies = [
   {
@@ -22,6 +23,7 @@ const relatedStudies = [
 ];
 
 export default function RelatedCaseStudies() {
+  const router = useRouter();
   return (
     <section className="bg-white py-16 px-6">
       <div className="max-w-7xl mx-auto">
@@ -34,7 +36,10 @@ export default function RelatedCaseStudies() {
               market presence
             </h2>
           </div>
-          <button className="bg-[#FF5E15] text-white font-bold px-6 py-3 rounded-full">
+          <button
+            className="bg-[#FF5E15] text-white font-bold px-6 py-3 rounded-full"
+            onClick={() => router.push("/blogs")}
+          >
             View All Case Studies
           </button>
         </div>
