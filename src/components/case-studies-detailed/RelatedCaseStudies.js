@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import BadgeBlue from "../common/BadgeBlue";
 import { ChevronRight } from "lucide-react";
