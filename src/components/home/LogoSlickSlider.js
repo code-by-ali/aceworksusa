@@ -39,9 +39,9 @@ export default function ClientReview() {
         {/* Heading */}
         <div className="text-center mb-12 lg:mb-16">
           <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white leading-relaxed">
-            2,500+ professionals, teams, and{" "}
+            Join 2,500+ Businesses Growing With
             <br className="hidden sm:block" />
-            enterprises grow with Aceworks
+            America's MOST Trusted Digital Agency
           </h3>
         </div>
 
@@ -62,10 +62,7 @@ export default function ClientReview() {
         <div className="text-center mt-12 lg:mt-16">
           <button className="outline-none inline-flex items-center gap-2 text-white text-sm md:text-base font-medium cursor-pointer">
             See Our Client Review
-            <CommonImage
-              src={ClientIcon.src || ClientIcon}
-              alt="arrow-icon"
-            />
+            <CommonImage src={ClientIcon.src || ClientIcon} alt="arrow-icon" />
           </button>
         </div>
       </div>

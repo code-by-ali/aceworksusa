@@ -9,29 +9,30 @@ import CommonImage from "../common/CommonImage";
 
 const cards1 = [
   {
-    title: "Full - Funnel Execution",
+    title: "Full-Funnel Marketing That Converts",
     description:
-      "We don't just run ads, we design, strategize and optimize customer journey",
+      "We're not just a digital marketing company running random campaigns. We map your entire customer journey, from first click to final sale, and optimize every step to maximize conversions.",
     image: DigitalSolutionImg1,
   },
   {
-    title: "Performance Obsessed",
+    title: "Obsessed With Results, Not Metrics",
     description:
-      "We don't chase vanity metrics. Every strategy is built to deliver leads, revenue and ROI.",
+      "Likes and impressions don't pay the bills. Our online marketing strategies focus on what actually matters: qualified leads, paying customers and measurable ROI that impacts your bottom line.",
     image: DigitalSolutionImg2,
   },
 ];
 
 const cards2 = [
   {
-    title: "Custom Strategies, Not Templates.",
+    title: "Custom Strategies Built For Your Business",
     description:
-      "Every business is different, so are our solutions. We build strategies tailored to your industry, goals and behaviour.",
+      "Cookie-cutter doesn't work. As a digital marketing company that actually listens, we create custom strategies based on your industry, audience and specific growth goals, not some generic template.",
     image: DigitalSolutionImg3,
   },
   {
-    title: "Results in weeks, Not Months",
-    description: "Expert guidance for smart works.",
+    title: "Real Growth In Weeks, Not Months",
+    description:
+      "Forget agencies that take forever to show results. Our proven online marketing systems are designed to generate momentum fast, so you start seeing traction within weeks, not waiting around for half a year.",
     image1: DigitalSolutionImg4,
     image2: DigitalSolutionImg5,
   },
@@ -43,14 +44,17 @@ const DigitalSolution = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex flex-col items-center mb-12 lg:mb-16">
-          <BadgeBlue className="mx-auto">Why Choose Acework</BadgeBlue>
+          <BadgeBlue className="mx-auto">Why Choose Acework?</BadgeBlue>
           <h3 className="text-center text-3xl sm:text-4xl xl:text-5xl font-semibold tracking-[-2px] mb-4 text-primary">
-            Digital solution for <br className="hidden lg:block" /> your growth
+            We Build Brands People
+            <br className="hidden lg:block" /> Actually Find
           </h3>
           <p className="text-center text-description font-medium text-base md:text-lg max-w-4xl">
-            Our expertise lies in strategic design, personalized marketing, and
-            technological integration, ensuring your success in the
-            ever-evolving digital landscape.
+            Looking for a “digital marketing agency near me” that actually
+            delivers? We specialize in internet marketing strategies that turn
+            clicks into customers and traffic into revenue. No cookie-cutter
+            plans, no empty promises, just personalized campaigns built to grow
+            your business.
           </p>
         </div>
 

@@ -15,22 +15,22 @@ import CommonImage from "../common/CommonImage";
 
 const content = [
   {
-    title: "Digital Marketing",
-    number: "120",
+    title: "SEO & Web Marketing",
+    number: "300",
     icon: DigitalMarketingIcon1,
-    text: "Over 625 active projects demonstrate our capacity to scale globally and reliably",
+    text: "Businesses ranking on page 1 of Google thanks to our proven SEO strategies and web marketing expertise.",
   },
   {
-    title: "Search Engine Optimized",
-    number: "120",
+    title: "Paid Advertising (PPC)",
+    number: "$5M",
     icon: DigitalMarketingIcon2,
-    text: "Over 625 active projects demonstrate our capacity to scale globally and reliably",
+    text: "Ad spend managed monthly across Google, Facebook and LinkedIn, optimized for maximum ROI.",
   },
   {
-    title: "Social Media Marketing",
-    number: "$720M",
+    title: "Digital PR & Link Building",
+    number: "1,200",
     icon: DigitalMarketingIcon3,
-    text: "Clients manage $720M+ in media using our design-driven systems effectively.",
+    text: "High-authority backlinks secured through strategic digital PR campaigns that boost rankings and credibility.",
   },
   {
     title: "Projects complete",
@@ -56,15 +56,16 @@ export default function DigitalMarketing() {
         <BadgeBlue className="mx-auto">Our Services</BadgeBlue>
 
         <h3 className="text-center text-3xl sm:text-4xl xl:text-5xl font-semibold tracking-[-2px] text-primary mb-4">
-          Full Service Digital <br />
-          Marketing Agency
+          Digital Marketing Services
+          <br />
+          That Cover Every Channel
         </h3>
 
         <p className="text-center text-description text-base md:text-lg lg:text-xl max-w-3xl mx-auto mb-12">
-          We offer comprehensive Service Digital Marketing solutions to boost
-          your online presence. Our services include SEO, social media
-          marketing, paid ads, content creation, and email marketing, all
-          tailored to your business needs.
+          We're a full-service digital marketing agency offering everything you
+          need to dominate online. From SEO and paid ads to web marketing and
+          digital PR, our digital marketing services are built to generate
+          leads, increase revenue and scale your business fast.
         </p>
 
         <Swiper

@@ -12,7 +12,7 @@ const services = [
     tagline: "12 Projects",
     image: SeoImage1,
     description:
-      "Maximize your presence on search engine results pages on a local scale",
+      "Get found by customers searching for “digital marketing companies near me” and watch your local traffic skyrocket.",
   },
   {
     title: "Google My Business",
@@ -20,7 +20,7 @@ const services = [
     tagline: "2 Projects",
     image: SeoImage1,
     description:
-      "Over 625 active projects demonstrate our capacity to scale globally and reliably",
+      "Optimize your GMB profile to rank higher in local searches and convert more nearby customers into sales.",
   },
   {
     title: "Link Building & Content",
@@ -28,7 +28,7 @@ const services = [
     tagline: "3 Projects",
     image: SeoImage1,
     description:
-      "Over 625 active projects demonstrate our capacity to scale globally and reliably",
+      "Build authority with high-quality backlinks and SEO-optimized content that earns you top rankings on Google.",
   },
   {
     title: "Email Marketing",
@@ -36,7 +36,7 @@ const services = [
     tagline: "4 Projects",
     image: SeoImage1,
     description:
-      "Over 625 active projects demonstrate our capacity to scale globally and reliably",
+      "Turn subscribers into buyers with personalized email campaigns included in our digital marketing packages.",
   },
   {
     title: "Design & Branding",
@@ -44,7 +44,7 @@ const services = [
     tagline: "5 Projects",
     image: SeoImage1,
     description:
-      "Over 625 active projects demonstrate our capacity to scale globally and reliably",
+      "Stand out with professional web design and brand identity that makes customers remember and trust you.",
   },
   {
     title: "ORM Management",
@@ -52,7 +52,7 @@ const services = [
     tagline: "6 Projects",
     image: SeoImage1,
     description:
-      "Over 625 active projects demonstrate our capacity to scale globally and reliably",
+      "Protect your reputation online by managing reviews, ratings and customer feedback across all platforms.",
   },
 ];
 
@@ -75,8 +75,9 @@ const SeoServices = () => {
         {/* Heading + Buttons */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-12">
           <h3 className="font-medium text-3xl md:text-4xl lg:text-5xl tracking-[-1.76px] text-white">
-            How can we help <br />
-            Your business grow
+            How We Help Your Business
+            <br />
+            Dominate Online?
           </h3>
 
           <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">

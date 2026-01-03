@@ -19,7 +19,7 @@ const HeroSection = () => {
         <div className="container mx-auto px-6 flex flex-col gap-8 pb-32 sm:pb-40">
           {/* Customer Review Badge */}
           <div className="flex items-center gap-2 bg-white/10 rounded-full px-8 py-4 w-fit backdrop-blur">
-            <div className="flex -space-x-3 relative"> 
+            <div className="flex -space-x-3 relative">
               <Image
                 unoptimized
                 src={cutomerimg}
@@ -38,27 +38,30 @@ const HeroSection = () => {
                 alt="Verified"
               />
               <div className="text-white font-semibold ml-3 text-2xl">
-                130K+
+                150K+
               </div>
               <div className="ml-3 text-sm" style={{ color: "#F1F2FA" }}>
-                Customer Reviews
+                Happy Clients
               </div>
             </div>
           </div>
 
           {/* Hero Headline */}
           <div className="Hero-headline">
-            <div className="tagline">Your Trusted Growth Experts</div>
+            <div className="tagline">
+              Partner With Digital Marketing Experts You Can Trust
+            </div>
             <h1 className="text-white !text-4xl sm:!text-5xl lg:!text-6xl">
-              <span className="block">Strategy That Scales.</span>
-              <span className="block">Growth That Lasts</span>
+              <span className="block">Digital Marketing Agency</span>
+              <span className="block">That Multiplies Your Revenue</span>
             </h1>
 
             {/* Subheadline */}
             <p className="!break-words !text-base sm:!text-xl xl:!text-2xl">
-              We craft data-driven strategies that drive growth, helping brands
-              <br />
-              navigate the digital landscape with precision.
+              Acework is a full-service digital marketing agency helping US
+              businesses grow faster with proven strategies, <br />
+              transparent pricing and results you can actually measure. navigate
+              the digital landscape with precision.
             </p>
 
             {/* Call to Action Buttons */}
@@ -82,7 +85,7 @@ const HeroSection = () => {
         {/* Logos / Badges Section */}
         <div className="bg-white/12 backdrop-blur-[24px] border border-white/40 border-b-0 rounded-tl-[24px] p-4 sm:p-6 md:p-8 absolute bottom-0 right-0">
           <p className="!text-lg sm:!text-xl xl:!text-2xl text-white">
-            Recognized for Excellence in Marketing Services
+            Trusted By 500+ Growing Businesses
           </p>
           <div className="flex flex-wrap items-center justify-between gap-8">
             <Image

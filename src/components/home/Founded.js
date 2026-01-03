@@ -12,9 +12,11 @@ const Founded = () => {
         <div className="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-20 mb-12 lg:mb-20">
           <div className="w-full lg:w-2/3">
             <h3 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-medium tracking-[-2.48px] text-primary">
-              Founded in 2016, we are a <br />
-              California based independent <br />
-              digital marketing agency.
+              We've Helped 500+
+              <br />
+              US Businesses Double
+              <br />
+              Their Revenue Online
             </h3>
           </div>
           <div className="w-[160px] sm:w-[200px] lg:w-[257px] flex-shrink-0">
@@ -34,20 +36,22 @@ const Founded = () => {
           <div className="w-full">
             <div className="space-y-6">
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-grey leading-relaxed tracking-[0.4px]">
-                We strive to create content that not only informs but also
-                inspires action, helping businesses establish authority in their
-                industry.
+                Since 2016, Acework has been the digital marketing agency USA
+                businesses trust when generic tactics fail. We're not
+                order-takers, we're your digital marketing consultant and growth
+                partner, building strategies that turn your website into a
+                customer-generating machine.
               </p>
               <div className="grid grid-cols-2 items-center gap-4">
                 <div>
-                  <p className="text-sm sm:text-base md:text-lg lg:text-xl text-grey tracking-[0.4px]">
-                    We have raised more than
+                  <p className="text-sm sm:text-sm md:text-base lg:text-lg text-grey tracking-[0.4px]">
+                    Revenue Generated For Our Clients
                   </p>
                 </div>
-                <div className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extralight text-secondary">
-                  5
+                <div className="text-4xl sm:text-5xl md:text-6xl font-extralight text-secondary">
+                  $50
                   <span className="relative">
-                    M
+                    M+
                     <span className="absolute top-0 left-0 w-full h-1 bg-secondary"></span>
                   </span>
                 </div>

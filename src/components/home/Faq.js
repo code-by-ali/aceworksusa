@@ -6,10 +6,10 @@ const Faq = () => {
   return (
     <section className="py-20 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
-        <BadgeBlue className="mx-auto mb-2">FAQ</BadgeBlue>
+        <BadgeBlue className="mx-auto mb-2">FAQs</BadgeBlue>
 
         <h3 className="text-3xl sm:text-4xl xl:text-5xl font-semibold text-center mb-8 text-primary tracking-[-2px]">
-          We're here to answer all <br /> your questions
+          Got Questions? <br /> We've Got Answers
         </h3>
 
         <FaqContent />

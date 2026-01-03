@@ -5,16 +5,16 @@ import RealResultImg from "@/public/assets/home-real-result-img-1.svg";
 
 const card = [
   {
-    title: "Expert In-house Team Across Every Vertical",
-    text: "Create your account in just seconds with only your email and a secure password. Enjoy instant access to powerful financial tools and valuable resources.",
+    title: "We Analyze Your Business and Market",
+    text: "We're not generalists pretending to know your business. Our team includes specialists across SEO, paid ads, content and conversion optimization, each bringing years of hands-on experience. Whether you're in eCommerce, B2B or local services, we speak your language and understand what drives results in your market.",
   },
   {
-    title: "Strategy That Starts and Ends With you",
-    text: "Link your bank, credit cards, and other financial accounts to get a complete overview of your money in one convenient place, making budgeting and tracking expenses easier.",
+    title: "We Build Your Custom Strategy",
+    text: "Your business isn't like everyone else's, so why should your digital marketing strategy be? We start by understanding your goals, your customers and your competition. Then we build a tailored roadmap that aligns with your budget and timeline, no generic templates, no one-size-fits-all approaches.",
   },
   {
-    title: "Performance Marketing Built to Drive ROI",
-    text: "Customize your budget, set savings goals, and track your expenses effortlessly with AI-driven insights tailored specifically to your unique needs.",
+    title: "We Execute and Optimize For ROI",
+    text: "We're obsessed with what actually moves your business forward: qualified leads, sales and measurable ROI. Every campaign we launch is tracked, tested and optimized to ensure your marketing dollars work harder. Plus, as a white label digital marketing agency, we also partner with other agencies to deliver exceptional results under their brand.",
   },
 ];
 
@@ -36,18 +36,18 @@ const RealResult = () => {
 
           {/* Content Section */}
           <div className="w-full lg:w-1/2 order-2">
-            <BadgeOrange className="mb-2">How it Works</BadgeOrange>
+            <BadgeOrange className="mb-2">How We Work</BadgeOrange>
 
             <h3 className="text-3xl sm:text-4xl xl:text-5xl font-semibold mt-0 mb-4 text-white tracking-[-2px]">
-              Bold Ideas. Smart
-              <br /> Execution. Real Results
+              From Strategy To Scale In 3 Steps
             </h3>
 
             <p className="text-base md:text-lg lg:text-xl mb-8 text-[#FFFFFF80] leading-relaxed">
-              At AceWorks USA, we're not just another digital agency - we're
-              your growth partner. <br />
-              From strategy to scaling, we bring ideas to life and drive
-              measurable business impact
+              We don't believe in guesswork campaigns. We're a results-driven
+              digital marketing agency that builds every online digital
+              marketing strategy around one thing: your business goals. From the
+              first conversation to scaling your revenue, we're with you every
+              step of the way.
             </p>
 
             {/* Cards */}
