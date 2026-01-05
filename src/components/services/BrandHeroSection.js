@@ -18,13 +18,15 @@ export default function BrandHeroSection() {
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-center text-primary mb-6 leading-tight tracking-tight">
           Big ideas, smart strategies to
           <br />
-          supercharge ⚡ your brand!
+          Supercharge ⚡ Your Brand!
         </h1>
 
         {/* Subheading */}
         <p className="text-center font-medium text-primary/80 text-sm sm:text-base lg:text-lg mb-6 max-w-2xl mx-auto">
-          Your go-to agency for designs that inspire and strategies that
-          deliver. We turn ideas into lasting impressions.
+          Your trusted digital marketing agency for strategies that actually
+          work. As one of the top digital marketing agencies in USA, we combine
+          creative thinking with data-driven execution to grow your business
+          online.
         </p>
 
         {/* Rating */}
@@ -38,7 +40,7 @@ export default function BrandHeroSection() {
             ))}
           </div>
           <span className="text-sm sm:text-base text-[#0F0F0F]/60 font-medium">
-            Our 200+ Our 5-Star Reviews
+            200+ Five-Star Reviews
           </span>
         </div>
 
@@ -50,11 +52,12 @@ export default function BrandHeroSection() {
         {/* Bottom Section - Tagline */}
         <div className="flex items-center justify-center mb-12">
           <h2 className="text-center text-3xl md:text-4xl lg:text-5xl font-semibold text-primary mb-2 leading-tight tracking-tight max-w-4xl">
-            <span className="text-[#FF5E15]">Building</span> brands,{" "}
-            <span className="text-[#FF5E15]">boosting</span> businesses,{" "}
+            Helping
+            <span className="text-[#FF5E15]"> Businesses </span> Dominate ,{" "}
+            <span className="text-[#FF5E15]">Online </span> With{" "}
             <span>
-              and <span className="text-[#FF5E15]">redefining</span>{" "}
-              possibilities. Let's grow your brand together.
+              Proven <span className="text-[#FF5E15]">Digital </span> Marketing
+              Strategies
             </span>
           </h2>
         </div>
@@ -64,30 +67,30 @@ export default function BrandHeroSection() {
           {/* Stat 1 */}
           <div className="text-left">
             <div className="text-4xl sm:text-5xl lg:text-6xl font-normal text-primary mb-2 border border-primary/60 border-dashed rounded-4xl p-5">
-              250<span className="text-[#F15533]">+</span>
+              350<span className="text-[#F15533]">+</span>
               <h3 className="text-lg md:text-xl font-medium text-[#0F0F0F] mb-2 tracking-tight">
                 Projects Delivered
               </h3>
             </div>
 
             <p className="text-sm md:text-base font-medium text-[#0F0F0F]/80 px-3 py-2 tracking-tight">
-              We've successfully completed over 250 projects—and we're just
-              getting started!
+              We've successfully delivered 350+ digital marketing campaigns that
+              generate real revenue, not just vanity metrics.
             </p>
           </div>
 
           {/* Stat 2 */}
           <div className="text-left">
             <div className="text-4xl sm:text-5xl lg:text-6xl font-normal text-primary mb-2 border border-primary/60 border-dashed rounded-4xl p-5">
-              70<span className="text-[#F15533]">%</span>
+              85<span className="text-[#F15533]">%</span>
               <h3 className="text-lg md:text-xl font-medium text-[#0F0F0F] mb-2 tracking-tight">
-                Business Growth
+                Client Revenue Growth
               </h3>
             </div>
 
             <p className="text-sm md:text-base font-medium text-[#0F0F0F]/80 px-3 py-2 tracking-tight">
-              Our strategies have helped clients achieve up to 70% revenue
-              growth in just one year!
+              Our internet marketing strategies have helped clients achieve up
+              to 85% revenue growth in under 12 months.
             </p>
           </div>
 
@@ -99,10 +102,9 @@ export default function BrandHeroSection() {
                 Happy Clients
               </h3>
             </div>
-
             <p className="text-sm md:text-base font-medium text-[#0F0F0F]/80 px-3 py-2 tracking-tight">
-              More than 500 satisfied clients trust us to bring their ideas to
-              life.
+              More than 500 businesses trust our digital marketing company to
+              drive their online growth and generate consistent leads.
             </p>
           </div>
         </div>

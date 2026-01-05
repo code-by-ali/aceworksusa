@@ -18,46 +18,46 @@ import CommonImage from "../common/CommonImage";
 
 export default function ComparisonSection() {
   const others = [
-    "Generic Solutions",
-    "Jargon Overload",
-    "Boring Creativity",
-    "Fluff Metrics",
-    "One-Time Campaigners",
-    "Hidden Costs",
-    "Outdated Methods",
-    "Limited Scope",
-    "Reactive Tactics",
-    "Just Another Client",
+    "Generic cookie-cutter solutions",
+    "Confusing industry jargon",
+    "Safe, boring creative",
+    "Vanity metrics (likes, impressions)",
+    "One-time project mindset",
+    "Hidden fees and surprise costs",
+    "Outdated marketing tactics",
+    "Limited service offerings",
+    "Reactive when problems arise",
+    "You're just another account number",
   ];
 
   const aceworks = [
-    { label: "Personalized Plans", icon: Puzzle },
-    { label: "Plain Talk", icon: MessageCircleMore },
-    { label: "Bold Ideas", icon: Rocket },
-    { label: "Real ROI", icon: ChartColumnIncreasing },
-    { label: "Long-Term Partners", icon: Handshake },
-    { label: "Transparent Pricing", icon: Tag },
-    { label: "Innovative Tools", icon: Zap },
-    { label: "Full-Service Experts", icon: BriefcaseBusiness },
-    { label: "Proactive Strategies", icon: Crown },
-    { label: "Passion & Care", icon: Heart },
+    { label: "Custom strategies for your business", icon: Puzzle },
+    { label: "Clear, straightforward communication", icon: MessageCircleMore },
+    { label: "Bold ideas that get noticed", icon: Rocket },
+    { label: "Real ROI and revenue growth", icon: ChartColumnIncreasing },
+    { label: "Long-term growth partnerships", icon: Handshake },
+    { label: "Transparent, upfront pricing", icon: Tag },
+    { label: "Cutting-edge digital marketing tools", icon: Zap },
+    { label: "Full-service digital marketing agency", icon: BriefcaseBusiness },
+    { label: "Proactive strategies and planning", icon: Crown },
+    { label: "Passion, care and dedicated support", icon: Heart },
   ];
 
   return (
     <section className="bg-white text-black py-16 px-6 md:px-12 flex flex-col items-center text-center">
       {/* Header */}
       <div className="flex flex-col items-center justify-center mb-12">
-        <BadgeBlue>What makes us unique</BadgeBlue>
+        <BadgeBlue>What Makes Us Unique</BadgeBlue>
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-semibold max-w-5xl tracking-tight text-primary leading-snug">
-          While others copy and paste, we innovate and elevate. Your brand gets{" "}
-          the VIP treatment it truly deserves.
+          Why Smart Businesses Choose Acework Over Other Marketing Firms Near
+          Me?
         </h2>
       </div>
 
       {/* Column Headings */}
       <div className="flex justify-center w-full max-w-5xl mb-3">
         <div className="w-1/2 text-center text-xl md:text-2xl font-bold">
-          Others
+          Others Agencies
         </div>
         <div className="w-1/2 text-center text-xl md:text-2xl font-bold flex justify-center items-center gap-2">
           <span>

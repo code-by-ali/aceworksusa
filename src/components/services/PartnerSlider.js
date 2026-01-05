@@ -21,24 +21,25 @@ export default function PartnerSlider() {
     {
       id: 1,
       title:
-        "We take care of generating leads while you focus on doing what you love running your business!",
+        "We handle lead generation while you focus on running your business, no micromanagement needed.",
       img: PartnerCardImg1,
     },
     {
       id: 2,
       title:
-        "Your brand stays visible 24/7 with our automated marketing strategies.",
+        "Your brand stays visible around the clock with our automated online marketing systems working 24/7.",
       img: PartnerCardImg2,
     },
     {
       id: 3,
       title:
-        "Every solution is tailored to fit your unique business needs no cookie-cutter strategies here!",
+        "Every digital marketing strategy is customized to your business goals, no templates, no shortcuts.",
       img: PartnerCardImg3,
     },
     {
       id: 4,
-      title: "Get big agency results without breaking the bank.",
+      title:
+        "Get enterprise-level digital marketing services without the enterprise price tag. Quality results, affordable pricing.",
       img: PartnerCardImg4,
     },
   ];
@@ -70,7 +71,7 @@ export default function PartnerSlider() {
     };
 
     window.addEventListener("resize", handleResize);
-    
+
     // Small delay to ensure proper initialization on mobile
     const timer = setTimeout(() => {
       updateSlidesToShow();
@@ -171,12 +172,12 @@ export default function PartnerSlider() {
           {/* Title */}
           <div className="flex-1">
             <BadgeOrange className="rotate-[0deg] mb-4">
-              Why acework
+              Why Acework?
             </BadgeOrange>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white tracking-tight leading-tight">
-              See why partnering with
+              The Digital Marketing Agency
               <br />
-              us is the smartest move.
+              That Puts Your Growth First
             </h2>
           </div>
 

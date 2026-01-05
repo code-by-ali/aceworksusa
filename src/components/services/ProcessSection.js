@@ -10,25 +10,25 @@ export default function ProcessSection() {
       id: 1,
       title: "Discover & Strategize",
       description:
-        "We dive deep into understanding your brand, goals, and audience. Through collaborative discussions and research, we craft a clear roadmap tailored to your needs.",
+        "We start by understanding your business, goals and target audience. Through in-depth discovery sessions, we create a customized digital marketing strategy tailored to deliver the results you need.",
     },
     {
       id: 2,
       title: "Design & Prototype",
       description:
-        "We turn strategy into visually stunning and interactive designs that align perfectly with your brand identity.",
+        "Our creative team transforms strategy into visually compelling designs and campaigns that align with your brand identity and speak directly to your ideal customers.",
     },
     {
       id: 3,
       title: "Develop & Test",
       description:
-        "Our development team transforms designs into fast, scalable, and high-performing products tested for excellence.",
+        "We bring your campaigns to life with precision execution, from building high-performance websites to launching targeted ad campaigns tested for maximum conversion.",
     },
     {
       id: 4,
       title: "Launch & Grow",
       description:
-        "We ensure a seamless launch and continue optimizing your product to help you grow with confidence.",
+        "After launch, we continuously monitor, test, and optimize your campaigns to ensure consistent growth and improve ROI month over month.",
     },
   ];
 
@@ -38,8 +38,7 @@ export default function ProcessSection() {
       <div className="flex flex-col items-center text-center mb-12">
         <BadgeOrange>Our Process</BadgeOrange>
         <h2 className="text-3xl md:text-4xl lg:text-6xl font-semibold leading-snug max-w-5xl">
-          From idea to impact our process makes it easy, exciting, and
-          effective!
+          From First Call To First Results: Here's How We Work
         </h2>
       </div>
 

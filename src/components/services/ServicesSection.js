@@ -11,55 +11,57 @@ export default function ServicesSection() {
       id: 1,
       category: "Web Design and Development",
       description:
-        "Your website is like your digital handshake—it's the first thing people notice about you online. Our Web Design & Development services are all about making that handshake firm, friendly, and unforgettable.",
+        "Your website is your digital storefront, and first impressions matter. Our web marketing experts create high-converting websites that don't just look beautiful but actually turn visitors into paying customers. From user experience to mobile optimization, every element is designed to support your online digital marketing goals.",
       tags: [
         "UI UX Design",
         "Custom Website Design",
-        "E-Commerce Development",
+        "eCommerce Development",
         "Content Management Systems (CMS)",
         "Website Maintenance and Support",
         "SEO Integration",
-        "UX/UI Optimization",
+        "Conversion Rate Optimization",
       ],
     },
     {
       id: 2,
       category: "Digital Marketing",
       description:
-        "Let's face it: the world is a noisy place. Your services (blogs, marketing services, and more) need some solid boosts. We deliver robust marketing campaigns with strategies like SEO, content marketing, PPC, and social media ads to make sure your brand gets noticed and remembered. We don't just aim for visibility—we go for meaningful engagement. It's all about making your brand always stay on top in front of your readers and earn them trust, repeat visitors.",
+        "Your business deserves more than just website traffic; it needs qualified leads and paying customers. As a leading digital marketing agency near me for businesses across America, we deliver comprehensive online marketing campaigns that combine SEO, PPC, content marketing and social media to maximize your ROI. We're not just another marketing agency near me; we're your growth partner focused on measurable results that impact your bottom line.",
       tags: [
         "SEO (Search Engine Optimization)",
-        "PPC Advertising",
+        "PPC Advertising (Google Ads, Facebook Ads)",
         "Social Media Marketing",
         "Email Marketing",
         "Content Marketing",
+        "Digital PR & Link Building",
       ],
     },
     {
       id: 3,
       category: "Branding & Creative Services",
       description:
-        "Your brand is so much more than a logo—it's personality, it's your voice, and your story that connects with your audience. We specialize in creative branding that perfectly aligns with what you offer and resonates with your audience. From logo design to full brand identity, we craft designs that truly leave a lasting impression.",
+        "Your brand is more than a logo; it's the story that connects you with your customers. Our creative team builds powerful brand identities that make your business unforgettable. Whether you're a startup or an established company, we craft visual identities that align perfectly with your digital marketing strategy and resonate with your target audience.",
       tags: [
-        "Logo Design",
+        "Logo Design & Brand Identity",
         "Brand Strategy & Positioning",
         "Visual Identity Design",
-        "Social media graphics",
-        "Pitch design",
+        "Social Media Graphics",
+        "Pitch Deck Design",
         "Print Designs & Illustrations",
-        "Packaging design",
+        "Packaging Design",
       ],
     },
     {
       id: 4,
       category: "App Design & Development",
       description:
-        "In the era of smartphones, people expect seamless experiences. If it works poorly, it's a dealbreaker. So, here comes your perfect app that not only looks stunning but are seamlessly intuitive. We use tools like Flutter and Swift to craft apps that users love to interact with.",
+        "People are glued to their phones. If your app crashes, loads slowly or feels clunky, they're gone. We build apps that actually work, fast, smooth and so intuitive your users don't need instructions. Whether it's iOS or Android, we handle everything from the first sketch to App Store launch.",
       tags: [
-        "iOS/TV for Apps",
+        "iOS/Android App Development",
         "Custom App Development",
         "Mobile Optimization",
-        "App Store Optimization",
+        "App Store Optimization (ASO)",
+        "Cross-Platform Development",
       ],
     },
   ];
@@ -76,7 +78,7 @@ export default function ServicesSection() {
           <div className="flex flex-col items-center justify-center">
             <BadgeBlue>Expertise</BadgeBlue>
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-primary mb-2 max-w-4xl">
-              Services designed to help your brand shine brighter
+              Full-Service Digital Marketing Solutions That Drive Results
             </h2>
           </div>
         </div>
@@ -152,7 +154,9 @@ export default function ServicesSection() {
 
                 {/* View Details Link */}
                 <button className="bg-white w-full py-4  px-4 flex flex-row justify-between items-center rounded-2xl gap-2">
-                  <span className="text-lg md:text-xl font-medium tracking-tight">View Details</span>
+                  <span className="text-lg md:text-xl font-medium tracking-tight">
+                    View Details
+                  </span>
                   <span className="">
                     <PlusIcon />
                   </span>
