@@ -145,7 +145,7 @@ const FaqContent = () => {
               className="flex justify-between items-start w-full text-left focus:outline-none group cursor-pointer"
             >
               <span className="font-bold text-xl md:text-2xl tracking-[-0.5px] text-primary flex-1 pr-4">
-                {idx + 1}.{faq.title}
+                {idx + 1}. {faq.title}
               </span>
               <span
                 className={`flex-shrink-0 transform transition-transform duration-300 ${
