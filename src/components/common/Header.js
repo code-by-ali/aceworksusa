@@ -5,10 +5,14 @@ import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const pathname = usePathname();
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
-  const closeMenu = () => setMenuOpen(false);
+  const closeMenu = () => {
+    setMenuOpen(false);
+    setServicesOpen(false);
+  };
 
   const isHomePage = pathname === "/";
   const textColor = isHomePage ? "text-white" : "text-[#2b6396]";
@@ -22,6 +26,15 @@ export default function Header() {
     "blogs",
     "detailed-service",
     "contact",
+  ];
+
+  const serviceSubItems = [
+    {
+      label: "Social Media Marketing",
+      href: "/social-media-marketing",
+    },
+    { label: "Search Engine Optimization", href: "/seo" },
+    { label: "Pay-per-Click Ads", href: "/pay-per-click-ads" },
   ];
 
   useEffect(() => {
@@ -44,7 +57,7 @@ export default function Header() {
         isHomePage ? "bg-transparent" : "bg-white"
       } !dark:bg-white`}
     >
-      {/* Desktop Layout */}
+      {/* ================= DESKTOP ================= */}
       <nav className="hidden lg:flex mx-auto px-4 justify-between items-center h-16 relative">
         {/* Logo */}
         <Link
@@ -56,17 +69,46 @@ export default function Header() {
 
         {/* Nav Items */}
         <div className="flex items-center">
-          {navItems.map((item) => (
-            <Link
-              key={item}
-              href={`/${item}`}
-              className={`ml-12 ${
-                pathname === `/${item}` ? "text-orange-500" : textColor
-              } ${hoverColor} no-underline transition-colors`}
-            >
-              {item.replace("-", " ").replace(/\b\w/g, (l) => l.toUpperCase())}
-            </Link>
-          ))}
+          {navItems.map((item) => {
+            if (item === "detailed-service") {
+              return (
+                <div key={item} className="relative group ml-12">
+                  <span
+                    className={`${textColor} ${hoverColor} cursor-pointer no-underline transition-colors`}
+                  >
+                    Services Detailed
+                  </span>
+
+                  {/* Dropdown */}
+                  <div className="absolute left-0 top-full mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 bg-white shadow-lg rounded-lg overflow-hidden">
+                    {serviceSubItems.map((sub) => (
+                      <Link
+                        key={sub.href}
+                        href={sub.href}
+                        className="block px-4 py-3 text-[#2b6396] hover:bg-gray-100 no-underline"
+                      >
+                        {sub.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              );
+            }
+
+            return (
+              <Link
+                key={item}
+                href={`/${item}`}
+                className={`ml-12 ${
+                  pathname === `/${item}` ? "text-orange-500" : textColor
+                } ${hoverColor} no-underline transition-colors`}
+              >
+                {item
+                  .replace("-", " ")
+                  .replace(/\b\w/g, (l) => l.toUpperCase())}
+              </Link>
+            );
+          })}
         </div>
 
         {/* CTA */}
@@ -78,7 +120,7 @@ export default function Header() {
         </Link>
       </nav>
 
-      {/* Tablet Layout */}
+      {/* ================= TABLET ================= */}
       <div className="hidden md:block lg:hidden mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <Link
@@ -96,21 +138,49 @@ export default function Header() {
         </div>
 
         <div className="flex justify-center items-center gap-8 py-4">
-          {navItems.map((item) => (
-            <Link
-              key={item}
-              href={`/${item}`}
-              className={`${
-                pathname === `/${item}` ? "text-secondary" : textColor
-              } ${hoverColor} no-underline transition-colors text-sm`}
-            >
-              {item.replace("-", " ").replace(/\b\w/g, (l) => l.toUpperCase())}
-            </Link>
-          ))}
+          {navItems.map((item) => {
+            if (item === "detailed-service") {
+              return (
+                <div key={item} className="relative group">
+                  <span
+                    className={`${textColor} ${hoverColor} cursor-pointer text-sm`}
+                  >
+                    Services Detailed
+                  </span>
+
+                  <div className="absolute left-0 top-full mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 bg-white shadow-lg rounded-lg overflow-hidden">
+                    {serviceSubItems.map((sub) => (
+                      <Link
+                        key={sub.href}
+                        href={sub.href}
+                        className="block px-4 py-3 text-[#2b6396] hover:bg-gray-100 no-underline"
+                      >
+                        {sub.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              );
+            }
+
+            return (
+              <Link
+                key={item}
+                href={`/${item}`}
+                className={`${
+                  pathname === `/${item}` ? "text-secondary" : textColor
+                } ${hoverColor} no-underline transition-colors text-sm`}
+              >
+                {item
+                  .replace("-", " ")
+                  .replace(/\b\w/g, (l) => l.toUpperCase())}
+              </Link>
+            );
+          })}
         </div>
       </div>
 
-      {/* Mobile Layout */}
+      {/* ================= MOBILE ================= */}
       <nav className="md:hidden mx-auto px-4 flex justify-between items-center h-16 relative">
         <Link
           href="/"
@@ -156,16 +226,48 @@ export default function Header() {
         }`}
       >
         <nav className="flex flex-col items-center justify-center h-full space-y-8 px-6 overflow-hidden">
-          {navItems.map((item) => (
-            <Link
-              key={item}
-              href={`/${item}`}
-              className="text-white text-2xl font-semibold hover:text-secondary transition-colors"
-              onClick={closeMenu}
-            >
-              {item.replace("-", " ").replace(/\b\w/g, (l) => l.toUpperCase())}
-            </Link>
-          ))}
+          {navItems.map((item) => {
+            if (item === "detailed-service") {
+              return (
+                <div key={item} className="text-center">
+                  <button
+                    onClick={() => setServicesOpen(!servicesOpen)}
+                    className="text-white text-2xl font-semibold hover:text-secondary transition-colors"
+                  >
+                    Services Detailed
+                  </button>
+
+                  {servicesOpen && (
+                    <div className="mt-4 space-y-4">
+                      {serviceSubItems.map((sub) => (
+                        <Link
+                          key={sub.href}
+                          href={sub.href}
+                          onClick={closeMenu}
+                          className="block text-lg text-white hover:text-secondary transition-colors"
+                        >
+                          {sub.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            }
+
+            return (
+              <Link
+                key={item}
+                href={`/${item}`}
+                className="text-white text-2xl font-semibold hover:text-secondary transition-colors"
+                onClick={closeMenu}
+              >
+                {item
+                  .replace("-", " ")
+                  .replace(/\b\w/g, (l) => l.toUpperCase())}
+              </Link>
+            );
+          })}
 
           <Link
             href="/contact"
